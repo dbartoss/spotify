@@ -27,12 +27,32 @@ namespace spotify
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            test.IsChecked = !test.IsChecked;
+
         }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
             
+        }
+
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

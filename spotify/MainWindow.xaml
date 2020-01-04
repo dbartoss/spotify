@@ -7,34 +7,134 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="740.164" Width="1317.623">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="757*"/>
+            <ColumnDefinition Width="553*"/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
             <ImageBrush/>
         </Grid.Background>
-        <StackPanel x:Name="Panel" Height="709" Width="240" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Black"/>
+        <StackPanel x:Name="Panel" Height="709" Width="240" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Black">
+            <StackPanel Height="100"/>
+            <Button Content="Strona glowna" Background="#00000000" BorderBrush="#FF707070" Foreground="White" Height="55"/>
+            <Button Content="Przegladaj" Foreground="White" Background="#00000000" Height="55"/>
+            <Button Content="Radio" Background="#00000000" Foreground="White" Height="56"/>
+            <TextBox Height="41" TextWrapping="Wrap" Text="BIBLIOTEKA" TextChanged="TextBox_TextChanged" Background="#00000000" Foreground="#FF00FF2E"/>
+            <Button Content="Stworzono dla Ciebie" Background="#00000000" Foreground="White" Height="44"/>
+            <Button Content="Ostatnio odtwarzane" Foreground="White" Background="#00000000" Height="45"/>
+            <Button Content="Polubione utwory" Background="#00000000" Foreground="White" Height="44"/>
+            <Button Content="Albumy" Foreground="White" Background="#00000000" Height="46"/>
+            <Button Content="Wykonawcy" Foreground="White" Height="50" Background="#00000000"/>
+            <Button Content="Podcasty" Foreground="White" Background="#00000000" Height="47"/>
+            <TextBox Height="40" TextWrapping="Wrap" Text="PLAYLISTY" Background="Black" Foreground="#FF00FF2E"/>
+            <Button Content="xxx" Foreground="White" Background="#00000000" Height="46"/>
+        </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="100" Margin="410,78,0,0" VerticalAlignment="Top" Width="100"/>
-        <StackPanel HorizontalAlignment="Left" Height="282" VerticalAlignment="Top" Width="1070" Margin="240,0,0,0">
+        <StackPanel HorizontalAlignment="Left" Height="231" VerticalAlignment="Top" Width="1070" Margin="240,0,0,0" Grid.ColumnSpan="2">
             <StackPanel.Background>
                 <ImageBrush ImageSource="assets/banner.jpg"/>
             </StackPanel.Background>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Height="100" VerticalAlignment="Center" Width="1070" Margin="240,609,0,0" Background="Black">
-            <Button Content="Button" Width="55" Margin="460,0,460,50" Click="Button_Click">
-                <Button.Foreground>
-                    <ImageBrush/>
-                </Button.Foreground>
-                <Button.Background>
-                    <ImageBrush ImageSource="assets/btn-play.png"/>
-                </Button.Background>
-            </Button>
-        </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="327" VerticalAlignment="Top" Width="1070" Margin="240,282,0,0" Background="Black">
-            <CheckBox Content="CheckBox" Name="test" Height="164" Background="White" Foreground="White" Checked="CheckBox_Checked"/>
-        </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="81" VerticalAlignment="Top" Width="83" Margin="0,25,0,0">
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Height="100" VerticalAlignment="Center" Width="1070" Margin="240,609,0,0" Background="Black" Grid.ColumnSpan="2"/>
+
+        <StackPanel HorizontalAlignment="Left" Height="378" VerticalAlignment="Top" Width="1070" Margin="240,231,0,0" Background="Black" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="-98,244,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <Button Content="Button" Width="49" Margin="294,266,414,399" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="44">
+            <Button.Foreground>
+                <ImageBrush/>
+            </Button.Foreground>
+            <Button.Background>
+                <ImageBrush ImageSource="assets/btn-play.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="Button" Width="49" Margin="294,315,414,349" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45">
+            <Button.Foreground>
+                <ImageBrush/>
+            </Button.Foreground>
+            <Button.Background>
+                <ImageBrush ImageSource="assets/btn-play.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="Button" Width="49" Margin="294,365,414,302" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="42">
+            <Button.Foreground>
+                <ImageBrush/>
+            </Button.Foreground>
+            <Button.Background>
+                <ImageBrush ImageSource="assets/btn-play.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="Button" Width="48" Margin="295,412,414,254" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="43">
+            <Button.Foreground>
+                <ImageBrush/>
+            </Button.Foreground>
+            <Button.Background>
+                <ImageBrush ImageSource="assets/btn-play.png"/>
+            </Button.Background>
+        </Button>
+        <TextBox HorizontalAlignment="Left" Height="36" Margin="368,274,0,0" TextWrapping="Wrap" Text="1. Song Name" VerticalAlignment="Top" Width="256" Background="#00000000" Foreground="White" FontWeight="Bold" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" Height="36" Margin="368,319,0,0" TextWrapping="Wrap" Text="2. Song Name" VerticalAlignment="Top" Width="256" Background="#00000000" Foreground="White" FontWeight="Bold" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" Height="36" Margin="368,371,0,0" TextWrapping="Wrap" Text="3. Song Name" VerticalAlignment="Top" Width="256" Background="#00000000" Foreground="White" FontWeight="Bold" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" Height="36" Margin="368,419,0,0" TextWrapping="Wrap" Text="4. Song Name" VerticalAlignment="Top" Width="256" Background="#00000000" Foreground="White" FontWeight="Bold" FontSize="20"/>
+        <Button Content="Play Song" Background="{x:Null}" Click="Button_Click_2" FontWeight="Bold" Foreground="#FF00FF97" FontSize="22" Margin="240,180,352,478"/>
+        <Button Content="Play Album" Background="{x:Null}" Click="Button_Click_2" FontWeight="Bold" Foreground="#FF00FF97" FontSize="22" Margin="405,178,187,478"/>
+        <Button Content="Biography" Background="{x:Null}" Click="Button_Click_2" FontWeight="Bold" Foreground="#FFDFF1EA" FontSize="22" Margin="273,165,10,493" Grid.Column="1"/>
+        <Label Content="Shakira" FontSize="36" FontWeight="Bold" Background="#00000000" Foreground="White" Margin="248,117,352,534"/>
+        <Button Content="Button" Width="66" Margin="728,639,516,10" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Grid.ColumnSpan="2">
+            <Button.Foreground>
+                <ImageBrush/>
+            </Button.Foreground>
+            <Button.Background>
+                <ImageBrush ImageSource="assets/btn-play.png"/>
+            </Button.Background>
+        </Button>
+        <Slider ValueChanged="Slider_ValueChanged" VerticalAlignment="Top" HorizontalAlignment="Stretch" Background="#00000000" Foreground="#00000000" BorderBrush="#00000000" Margin="406,681,10,0" Grid.Column="1"/>
+        <Slider ValueChanged="Slider_ValueChanged" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="323,614,54,0" Grid.ColumnSpan="2" Height="25"/>
+        <StackPanel Margin="0,0,662,629">
             <StackPanel.Background>
                 <ImageBrush ImageSource="assets/logo.jpg"/>
             </StackPanel.Background>
+            <StackPanel Height="100"/>
         </StackPanel>
+        <Button Content="Button" Width="48" Margin="294,460,415,206" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="43">
+            <Button.Foreground>
+                <ImageBrush/>
+            </Button.Foreground>
+            <Button.Background>
+                <ImageBrush ImageSource="assets/btn-play.png"/>
+            </Button.Background>
+        </Button>
+        <TextBox HorizontalAlignment="Left" Height="36" Margin="368,467,0,0" TextWrapping="Wrap" Text="5. Song Name" VerticalAlignment="Top" Width="256" Background="#00000000" Foreground="White" FontWeight="Bold" FontSize="20"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="678,654,0,0" VerticalAlignment="Top" Width="52" Height="38" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="89.17"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="assets/arrow.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="32,651,0,0" VerticalAlignment="Top" Width="54" Height="39" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="268.971"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="assets/arrow.png"/>
+            </Button.Background>
+        </Button>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="217,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="326" Height="294">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="assets/Shakira.jpg"/>
+            </TextBlock.Background>
+        </TextBlock>
 
     </Grid>
 </Window>
