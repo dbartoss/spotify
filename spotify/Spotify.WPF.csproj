@@ -107,5 +107,11 @@
   <ItemGroup>
     <Resource Include="Assets\Shakira.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Spotify.ClassLibrary\Spotify.ClassLibrary.csproj">
+      <Project>{e3e27931-d855-4b1d-b18e-aafc2baff72a}</Project>
+      <Name>Spotify.ClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
