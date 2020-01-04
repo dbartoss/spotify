@@ -95,8 +95,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="assets\spotifyy.jpg" />
-    <Resource Include="assets\twitter_card-default.jpg" />
+    <Resource Include="assets\banner.jpg" />
+    <Resource Include="assets\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\btn-play.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

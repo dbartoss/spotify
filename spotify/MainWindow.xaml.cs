@@ -24,5 +24,15 @@ namespace spotify
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            test.IsChecked = !test.IsChecked;
+        }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

@@ -14,14 +14,25 @@
         <StackPanel HorizontalAlignment="Left" Height="100" Margin="410,78,0,0" VerticalAlignment="Top" Width="100"/>
         <StackPanel HorizontalAlignment="Left" Height="282" VerticalAlignment="Top" Width="1070" Margin="240,0,0,0">
             <StackPanel.Background>
-                <ImageBrush ImageSource="assets/spotifyy.jpg"/>
+                <ImageBrush ImageSource="assets/banner.jpg"/>
             </StackPanel.Background>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="1070" Margin="240,609,0,0" Background="Black"/>
-        <StackPanel HorizontalAlignment="Left" Height="327" VerticalAlignment="Top" Width="1070" Margin="240,282,0,0" Background="Black"/>
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Height="100" VerticalAlignment="Center" Width="1070" Margin="240,609,0,0" Background="Black">
+            <Button Content="Button" Width="55" Margin="460,0,460,50" Click="Button_Click">
+                <Button.Foreground>
+                    <ImageBrush/>
+                </Button.Foreground>
+                <Button.Background>
+                    <ImageBrush ImageSource="assets/btn-play.png"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="327" VerticalAlignment="Top" Width="1070" Margin="240,282,0,0" Background="Black">
+            <CheckBox Content="CheckBox" Name="test" Height="164" Background="White" Foreground="White" Checked="CheckBox_Checked"/>
+        </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="81" VerticalAlignment="Top" Width="83" Margin="0,25,0,0">
             <StackPanel.Background>
-                <ImageBrush ImageSource="assets/twitter_card-default.jpg"/>
+                <ImageBrush ImageSource="assets/logo.jpg"/>
             </StackPanel.Background>
         </StackPanel>
 
