@@ -32,7 +32,7 @@
         <StackPanel HorizontalAlignment="Left" Height="100" Margin="410,78,0,0" VerticalAlignment="Top" Width="100"/>
         <StackPanel HorizontalAlignment="Left" Height="231" VerticalAlignment="Top" Width="1070" Margin="240,0,0,0" Grid.ColumnSpan="2">
             <StackPanel.Background>
-                <ImageBrush ImageSource="assets/banner.jpg"/>
+                <ImageBrush ImageSource="Assets/banner.jpg"/>
             </StackPanel.Background>
         </StackPanel>
         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Height="100" VerticalAlignment="Center" Width="1070" Margin="240,609,0,0" Background="Black" Grid.ColumnSpan="2"/>
@@ -44,7 +44,7 @@
                 <ImageBrush/>
             </Button.Foreground>
             <Button.Background>
-                <ImageBrush ImageSource="assets/btn-play.png"/>
+                <ImageBrush ImageSource="Assets/btn-play.png"/>
             </Button.Background>
         </Button>
         <Button Content="Button" Width="49" Margin="294,315,414,349" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45">
@@ -52,7 +52,7 @@
                 <ImageBrush/>
             </Button.Foreground>
             <Button.Background>
-                <ImageBrush ImageSource="assets/btn-play.png"/>
+                <ImageBrush ImageSource="Assets/btn-play.png"/>
             </Button.Background>
         </Button>
         <Button Content="Button" Width="49" Margin="294,365,414,302" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="42">
@@ -60,7 +60,7 @@
                 <ImageBrush/>
             </Button.Foreground>
             <Button.Background>
-                <ImageBrush ImageSource="assets/btn-play.png"/>
+                <ImageBrush ImageSource="Assets/btn-play.png"/>
             </Button.Background>
         </Button>
         <Button Content="Button" Width="48" Margin="295,412,414,254" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="43">
@@ -68,7 +68,7 @@
                 <ImageBrush/>
             </Button.Foreground>
             <Button.Background>
-                <ImageBrush ImageSource="assets/btn-play.png"/>
+                <ImageBrush ImageSource="Assets/btn-play.png"/>
             </Button.Background>
         </Button>
         <TextBox HorizontalAlignment="Left" Height="36" Margin="368,274,0,0" TextWrapping="Wrap" Text="1. Song Name" VerticalAlignment="Top" Width="256" Background="#00000000" Foreground="White" FontWeight="Bold" FontSize="20"/>
@@ -84,14 +84,14 @@
                 <ImageBrush/>
             </Button.Foreground>
             <Button.Background>
-                <ImageBrush ImageSource="assets/btn-play.png"/>
+                <ImageBrush ImageSource="Assets/btn-play.png"/>
             </Button.Background>
         </Button>
         <Slider ValueChanged="Slider_ValueChanged" VerticalAlignment="Top" HorizontalAlignment="Stretch" Background="#00000000" Foreground="#00000000" BorderBrush="#00000000" Margin="406,681,10,0" Grid.Column="1"/>
         <Slider ValueChanged="Slider_ValueChanged" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="323,614,54,0" Grid.ColumnSpan="2" Height="25"/>
         <StackPanel Margin="0,0,662,629">
             <StackPanel.Background>
-                <ImageBrush ImageSource="assets/logo.jpg"/>
+                <ImageBrush ImageSource="Assets/logo.jpg"/>
             </StackPanel.Background>
             <StackPanel Height="100"/>
         </StackPanel>
@@ -100,7 +100,7 @@
                 <ImageBrush/>
             </Button.Foreground>
             <Button.Background>
-                <ImageBrush ImageSource="assets/btn-play.png"/>
+                <ImageBrush ImageSource="Assets/btn-play.png"/>
             </Button.Background>
         </Button>
         <TextBox HorizontalAlignment="Left" Height="36" Margin="368,467,0,0" TextWrapping="Wrap" Text="5. Song Name" VerticalAlignment="Top" Width="256" Background="#00000000" Foreground="White" FontWeight="Bold" FontSize="20"/>
@@ -114,7 +114,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
             <Button.Background>
-                <ImageBrush ImageSource="assets/arrow.png"/>
+                <ImageBrush ImageSource="Assets/arrow.png"/>
             </Button.Background>
         </Button>
         <Button Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="32,651,0,0" VerticalAlignment="Top" Width="54" Height="39" RenderTransformOrigin="0.5,0.5">
@@ -127,12 +127,12 @@
                 </TransformGroup>
             </Button.RenderTransform>
             <Button.Background>
-                <ImageBrush ImageSource="assets/arrow.png"/>
+                <ImageBrush ImageSource="Assets/arrow.png"/>
             </Button.Background>
         </Button>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="217,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="326" Height="294">
             <TextBlock.Background>
-                <ImageBrush ImageSource="assets/Shakira.jpg"/>
+                <ImageBrush ImageSource="Assets/Shakira.jpg"/>
             </TextBlock.Background>
         </TextBlock>
 
