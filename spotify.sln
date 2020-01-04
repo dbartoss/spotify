@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spotify.WPF", "spotify\Spotify.WPF.csproj", "{5A718511-0994-4AE8-863E-87BF9C8A42BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spotify.WPF", "Spotify.WPF\Spotify.WPF.csproj", "{5A718511-0994-4AE8-863E-87BF9C8A42BD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spotify.ClassLibrary", "Spotify.ClassLibrary\Spotify.ClassLibrary.csproj", "{E3E27931-D855-4B1D-B18E-AAFC2BAFF72A}"
 EndProject
