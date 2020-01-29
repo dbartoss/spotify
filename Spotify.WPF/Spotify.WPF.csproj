@@ -111,7 +111,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\banner.jpg" />
-    <Resource Include="Assets\logo.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\btn-play.png" />
@@ -139,6 +138,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\playlist-btn-play.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
