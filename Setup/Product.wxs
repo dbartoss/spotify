@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"><?define Spotify.WPF_TargetDir=$(var.Spotify.WPF.TargetDir)?>
+	<Product Id="a46a4f25-6220-4084-a07b-6693c283385a" Name="Spotify Desktop Client" Language="1033" Version="1.0.0.0" Manufacturer="WSEI-Project" UpgradeCode="ee856153-0540-4b5b-8732-60025aaaae8f">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+    <Icon Id="Icon.ico" SourceFile="$(var.ProjectDir)Icon.ico"/>
+    <Property Id="ARPRODUCTICON" Value="icon.ico" />
+    
+    <UIRef Id="WixUI_Minimal" />
+    
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate />
+
+		<Feature Id="ProductFeature" Title="Spotify Desktop Client" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+      <ComponentRef Id="ApplicationShortcut" />
+      <ComponentRef Id="ApplicationShortcutDesktop" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="Spotify Desktop Client" />
+			</Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="Spotify Desktop Client"/>
+      </Directory>
+      <Directory Id="DesktopFolder" Name="Desktop"/>
+		</Directory>
+	</Fragment>
+
+  <Fragment>
+    <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid="ee856153-0540-4b5b-8732-60025aaaae8f">
+        <Shortcut Id="ApplicationStartMenuShortcut" Name="SpotifyDesktopClient" Description="SpotifyDesktopClient" Target="Spotify.WPF.exe" WorkingDirectory="APPLICATIONROOTDIRECTORY"/>
+        <RemoveFolder Id="ApplicationProgramsFolder" Directory="ApplicationProgramsFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\SpotifyDesktopCLient" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="DesktopFolder">
+      <Component Id="ApplicationShortcutDesktop" Guid="a93e90b3-fe11-45be-aca5-b51b947787d5">
+        <Shortcut Id="ApplicationDesktopShortcut" Name="SpotifyDesktopClient" Description="SpotifyDesktopClient" Target="Spotify.WPF.exe" WorkingDirectory="APPLICATIONROOTDIRECTORY"/>
+        <RemoveFolder Id="RemoveDesktopFolder" Directory="DesktopFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\SpotifyDesktopCLient" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+			<!-- <Component Id="ProductComponent"> -->
+				<!-- TODO: Insert files, registry keys, and other resources here. -->
+			<!-- </Component> -->
+			<Component Id="Spotify.WPF.exe" Guid="f24b6e76-9003-4cc6-abd8-a85bd53029bf">
+			  <File Id="Spotify.WPF.exe" Name="Spotify.WPF.exe" Source="$(var.Spotify.WPF_TargetDir)Spotify.WPF.exe" />
+			</Component>
+			<Component Id="Spotify.WPF.exe.config" Guid="c86d1708-7772-40e9-91d0-04c65bcb28ce">
+			  <File Id="Spotify.WPF.exe.config" Name="Spotify.WPF.exe.config" Source="$(var.Spotify.WPF_TargetDir)Spotify.WPF.exe.config" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>
