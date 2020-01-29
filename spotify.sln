@@ -5,22 +5,40 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spotify.WPF", "Spotify.WPF\Spotify.WPF.csproj", "{5A718511-0994-4AE8-863E-87BF9C8A42BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spotify.ClassLibrary", "Spotify.ClassLibrary\Spotify.ClassLibrary.csproj", "{E3E27931-D855-4B1D-B18E-AAFC2BAFF72A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spotify.ClassLibrary", "Spotify.ClassLibrary\Spotify.ClassLibrary.csproj", "{E3E27931-D855-4B1D-B18E-AAFC2BAFF72A}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Setup", "Setup\Setup.wixproj", "{1DD37567-D143-4DD2-A091-CE1E8039597A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{5A718511-0994-4AE8-863E-87BF9C8A42BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5A718511-0994-4AE8-863E-87BF9C8A42BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A718511-0994-4AE8-863E-87BF9C8A42BD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5A718511-0994-4AE8-863E-87BF9C8A42BD}.Debug|x86.Build.0 = Debug|Any CPU
 		{5A718511-0994-4AE8-863E-87BF9C8A42BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A718511-0994-4AE8-863E-87BF9C8A42BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A718511-0994-4AE8-863E-87BF9C8A42BD}.Release|x86.ActiveCfg = Release|Any CPU
+		{5A718511-0994-4AE8-863E-87BF9C8A42BD}.Release|x86.Build.0 = Release|Any CPU
 		{E3E27931-D855-4B1D-B18E-AAFC2BAFF72A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E3E27931-D855-4B1D-B18E-AAFC2BAFF72A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3E27931-D855-4B1D-B18E-AAFC2BAFF72A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E3E27931-D855-4B1D-B18E-AAFC2BAFF72A}.Debug|x86.Build.0 = Debug|Any CPU
 		{E3E27931-D855-4B1D-B18E-AAFC2BAFF72A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3E27931-D855-4B1D-B18E-AAFC2BAFF72A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3E27931-D855-4B1D-B18E-AAFC2BAFF72A}.Release|x86.ActiveCfg = Release|Any CPU
+		{E3E27931-D855-4B1D-B18E-AAFC2BAFF72A}.Release|x86.Build.0 = Release|Any CPU
+		{1DD37567-D143-4DD2-A091-CE1E8039597A}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{1DD37567-D143-4DD2-A091-CE1E8039597A}.Debug|x86.ActiveCfg = Debug|x86
+		{1DD37567-D143-4DD2-A091-CE1E8039597A}.Debug|x86.Build.0 = Debug|x86
+		{1DD37567-D143-4DD2-A091-CE1E8039597A}.Release|Any CPU.ActiveCfg = Release|x86
+		{1DD37567-D143-4DD2-A091-CE1E8039597A}.Release|x86.ActiveCfg = Release|x86
+		{1DD37567-D143-4DD2-A091-CE1E8039597A}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
