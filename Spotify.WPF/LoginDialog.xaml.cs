@@ -1,8 +1,6 @@
-﻿using System;
+﻿using System.Threading.Tasks;
 using System.Windows;
-
-using CefSharp;
-using Spotify.ClassLibrary.Authorization;
+using Spotify.ClassLibrary;
 
 namespace spotify
 {
@@ -11,42 +9,39 @@ namespace spotify
     /// </summary>
     public partial class LoginDialog : Window
     {
-
-        private string authData;
+        private Authorization _authorization = Authorization.Instance;
+        private SpotifyAPI _spotify = new SpotifyAPI();
 
         public LoginDialog()
         {
             InitializeComponent();
         }
 
-
-        private void HandleChange(object sender, CefSharp.FrameLoadEndEventArgs e)
+        private async void HandleNavigation(object sender, System.Windows.Navigation.NavigatingCancelEventArgs e)
         {
-            if (e.Url.ToString().Contains("localhost:3000/callback"))
+            string url = e.Uri.ToString();
+
+            if (url.StartsWith("http://localhost:3000/callback"))
             {
-                Dispatcher.BeginInvoke((Action)(async () =>
-               {
-                   authData = await Browser.GetTextAsync();
-                   this.SetAccessToken(authData);
-               }));
+                Browser.Source = null;
+                Browser.Dispose();
+                _authorization.SetCredentials(await Authorize(url));
+                NavigateToApp();
             }
         }
 
-        private void SetAccessToken(string data)
+        private async Task<AuthResponse> Authorize(string url)
         {
-            Authorization auth = Authorization.Instance;
-            auth.SetDataAsTokens(data);
-            this.NavigateToApp();
+            return await _spotify.GetAuthCredentials(url);
         }
+
 
         private void NavigateToApp()
         {
-            Window window = new MainWindow();
-            window.Show();
-            this.Close();
+            Window mainWindow = new MainWindow();
+            mainWindow.Show();
+            Close();
         }
-
-
     }
 
 }

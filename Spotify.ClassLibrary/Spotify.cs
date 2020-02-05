@@ -1,6 +1,7 @@
-﻿using Spotify.ClassLibrary.Authorization;
+﻿using Newtonsoft.Json;
 using System;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 namespace Spotify.ClassLibrary
@@ -8,17 +9,29 @@ namespace Spotify.ClassLibrary
 
     public class SpotifyAPI
     {
-        private string URL = "http://localhost:3000";
+        private readonly string URL = "http://localhost:3000";
 
-        private AuthData _authData;
-
-        private static readonly HttpClient client = new HttpClient();
+        private readonly HttpClient client = new HttpClient();
+        private readonly Authorization authorization = Authorization.Instance;
 
 
         public SpotifyAPI()
         {
-            _authData = new Authorization.AuthData();
-            //Authorization auth = new Authorization.lazy;
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            AuthCredentials credentials = authorization.AuthCredentials;
+        }
+
+        public async Task<AuthResponse> GetAuthCredentials(string url)
+        {
+            AuthResponse authResponse = null;
+            HttpResponseMessage response = await client.GetAsync(url);
+            if (response.IsSuccessStatusCode)
+            {
+                authResponse = JsonConvert.DeserializeObject<AuthResponse>(await response.Content.ReadAsStringAsync());
+            }
+            return authResponse;
         }
 
         public async Task<object> SearchArtist(string artistName) {

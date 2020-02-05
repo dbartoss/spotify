@@ -1,27 +1,19 @@
 ﻿using System;
-using Newtonsoft.Json;
 
-namespace Spotify.ClassLibrary.Authorization
+namespace Spotify.ClassLibrary
 {
 
     public sealed class Authorization
     {
-        private AuthData _AuthData = new AuthData();
-
+        private static readonly Lazy<Authorization> lazy = new Lazy<Authorization>(() => new Authorization());
         private Authorization() { }
 
         public static Authorization Instance { get => lazy.Value; }
+        public AuthCredentials AuthCredentials { get; private set; }
 
-        public AuthData AuthData { get => _AuthData; set => _AuthData = value; }
-
-        private static readonly Lazy<Authorization> lazy = new Lazy<Authorization>(() => new Authorization());
-
-
-        public void SetDataAsTokens(string data)
+        public void SetCredentials(AuthResponse response)
         {
-            AuthResponse response = JsonConvert.DeserializeObject<AuthResponse>(data);
-            _AuthData.AccessToken = response.AccessToken;
-            _AuthData.RefreshToken = response.RefreshToken;
+            AuthCredentials = new AuthCredentials(response);
         }
     }
 }
