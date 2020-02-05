@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spotify.ClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,14 +21,18 @@ namespace spotify
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private SpotifyAPI _api;
         public MainWindow()
         {
             InitializeComponent();
+
+            _api = new SpotifyAPI();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            _api.SearchArtist("Test");
         }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
