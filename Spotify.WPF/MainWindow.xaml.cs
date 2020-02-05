@@ -54,5 +54,10 @@ namespace spotify
         {
 
         }
+
+        private void ScrollViewer_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
+        {
+
+        }
     }
 }
