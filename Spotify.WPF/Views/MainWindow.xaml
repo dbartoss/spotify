@@ -17,8 +17,6 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}">
 
-
-
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -76,7 +74,7 @@
                                 <ImageBrush ImageSource=""/>
                             </Ellipse.Fill>
                         </Ellipse>-->
-
+						
                         <TextBlock FontSize="18" Margin="0 10" VerticalAlignment="Bottom">                    
                             Krzysztof Molenda
                         </TextBlock>
