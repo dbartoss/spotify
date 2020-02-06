@@ -14,6 +14,8 @@ namespace spotify
             InitializeComponent();
 
             CurrentPage.Content = new HomePage();
+
+            //CurrentPage.Content = new SearchResultsPage();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

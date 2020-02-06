@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="utf-16"?>
+﻿<?xml version="1.0" encoding="utf-16"?>
 <Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <DeployedProjects>
+    <string>Spotify.ClassLibrary\Spotify.ClassLibrary.csproj</string>
     <string>Spotify.WPF\Spotify.WPF.csproj</string>
   </DeployedProjects>
   <DirectoryMappings>
     <Item Key="" Value="INSTALLFOLDER" />
   </DirectoryMappings>
   <FileMappings />
-  <DeploySymbols>false</DeploySymbols>
-  <DeployLocalizations>true</DeployLocalizations>
-  <DeployExternalLocalizations>false</DeployExternalLocalizations>
+  <DeploySymbols>true</DeploySymbols>
+  <DeployLocalizations>false</DeployLocalizations>
+  <DeployExternalLocalizations>true</DeployExternalLocalizations>
 </Configuration>
