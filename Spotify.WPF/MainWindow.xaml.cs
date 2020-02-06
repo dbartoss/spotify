@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MaterialDesignColors;
+using MaterialDesignThemes.Wpf;
 
 namespace spotify
 {
@@ -21,8 +23,29 @@ namespace spotify
     public partial class MainWindow : Window
     {
         public MainWindow()
-        {
+        {            
+            var paletteHelper = new PaletteHelper();
+            //Retrieve the app's existing theme
+            ITheme theme = paletteHelper.GetTheme();
+
+            //Change the base theme to Dark
+            theme.SetBaseTheme(Theme.Dark);
+            //or theme.SetBaseTheme(Theme.Light);
+
+            //Change all of the primary colors to Red
+            theme.SetPrimaryColor(Colors.Lime);
+
+            //Change all of the secondary colors to Blue
+            theme.SetSecondaryColor(Colors.Green);
+
+            //You can also change a single color on the theme, and optionally set the corresponding foreground color
+            theme.PrimaryMid = new ColorPair(Colors.LimeGreen, Colors.White);
+
+            //Change the app's current theme
+            paletteHelper.SetTheme(theme);
+
             InitializeComponent();
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
