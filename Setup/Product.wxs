@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"><?define Spotify.WPF_TargetDir=$(var.Spotify.WPF.TargetDir)?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"><?define Spotify.WPF_TargetDir=$(var.Spotify.WPF.TargetDir)?><?define Spotify.ClassLibrary_TargetDir=$(var.Spotify.ClassLibrary.TargetDir)?>
 	<Product Id="a46a4f25-6220-4084-a07b-6693c283385a" Name="Spotify Desktop Client" Language="1033" Version="1.0.0.0" Manufacturer="WSEI-Project" UpgradeCode="ee856153-0540-4b5b-8732-60025aaaae8f">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 
-    <Icon Id="Icon.ico" SourceFile="$(var.ProjectDir)Icon.ico"/>
+    <Icon Id="Icon.ico" SourceFile="$(var.ProjectDir)Icon.ico" />
     <Property Id="ARPRODUCTICON" Value="icon.ico" />
     
     <UIRef Id="WixUI_Minimal" />
@@ -24,25 +24,25 @@
 				<Directory Id="INSTALLFOLDER" Name="Spotify Desktop Client" />
 			</Directory>
       <Directory Id="ProgramMenuFolder">
-        <Directory Id="ApplicationProgramsFolder" Name="Spotify Desktop Client"/>
+        <Directory Id="ApplicationProgramsFolder" Name="Spotify Desktop Client" />
       </Directory>
-      <Directory Id="DesktopFolder" Name="Desktop"/>
+      <Directory Id="DesktopFolder" Name="Desktop" />
 		</Directory>
 	</Fragment>
 
   <Fragment>
     <DirectoryRef Id="ApplicationProgramsFolder">
       <Component Id="ApplicationShortcut" Guid="ee856153-0540-4b5b-8732-60025aaaae8f">
-        <Shortcut Id="ApplicationStartMenuShortcut" Name="SpotifyDesktopClient" Description="SpotifyDesktopClient" Target="Spotify.WPF.exe" WorkingDirectory="APPLICATIONROOTDIRECTORY"/>
-        <RemoveFolder Id="ApplicationProgramsFolder" Directory="ApplicationProgramsFolder" On="uninstall"/>
-        <RegistryValue Root="HKCU" Key="Software\SpotifyDesktopCLient" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+        <Shortcut Id="ApplicationStartMenuShortcut" Name="SpotifyDesktopClient" Description="SpotifyDesktopClient" Target="Spotify.WPF.exe" WorkingDirectory="APPLICATIONROOTDIRECTORY" />
+        <RemoveFolder Id="ApplicationProgramsFolder" Directory="ApplicationProgramsFolder" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\SpotifyDesktopCLient" Name="installed" Type="integer" Value="1" KeyPath="yes" />
       </Component>
     </DirectoryRef>
     <DirectoryRef Id="DesktopFolder">
       <Component Id="ApplicationShortcutDesktop" Guid="a93e90b3-fe11-45be-aca5-b51b947787d5">
-        <Shortcut Id="ApplicationDesktopShortcut" Name="SpotifyDesktopClient" Description="SpotifyDesktopClient" Target="Spotify.WPF.exe" WorkingDirectory="APPLICATIONROOTDIRECTORY"/>
-        <RemoveFolder Id="RemoveDesktopFolder" Directory="DesktopFolder" On="uninstall"/>
-        <RegistryValue Root="HKCU" Key="Software\SpotifyDesktopCLient" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+        <Shortcut Id="ApplicationDesktopShortcut" Name="SpotifyDesktopClient" Description="SpotifyDesktopClient" Target="Spotify.WPF.exe" WorkingDirectory="APPLICATIONROOTDIRECTORY" />
+        <RemoveFolder Id="RemoveDesktopFolder" Directory="DesktopFolder" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\SpotifyDesktopCLient" Name="installed" Type="integer" Value="1" KeyPath="yes" />
       </Component>
     </DirectoryRef>
   </Fragment>
@@ -58,6 +58,24 @@
 			</Component>
 			<Component Id="Spotify.WPF.exe.config" Guid="c86d1708-7772-40e9-91d0-04c65bcb28ce">
 			  <File Id="Spotify.WPF.exe.config" Name="Spotify.WPF.exe.config" Source="$(var.Spotify.WPF_TargetDir)Spotify.WPF.exe.config" />
+			</Component>
+			<Component Id="Spotify.ClassLibrary.dll" Guid="c11f0dc3-ce0c-4fcd-bab7-cc3e939badfe">
+			  <File Id="Spotify.ClassLibrary.dll" Name="Spotify.ClassLibrary.dll" Source="$(var.Spotify.ClassLibrary_TargetDir)Spotify.ClassLibrary.dll" />
+			</Component>
+			<Component Id="Spotify.ClassLibrary.pdb" Guid="d55df2f0-ff0b-47f8-a7d9-fad7b9154beb">
+			  <File Id="Spotify.ClassLibrary.pdb" Name="Spotify.ClassLibrary.pdb" Source="$(var.Spotify.ClassLibrary_TargetDir)Spotify.ClassLibrary.pdb" />
+			</Component>
+			<Component Id="Spotify.WPF.pdb" Guid="a218592b-25c7-441f-8fc6-bcc9d7994cb4">
+			  <File Id="Spotify.WPF.pdb" Name="Spotify.WPF.pdb" Source="$(var.Spotify.WPF_TargetDir)Spotify.WPF.pdb" />
+			</Component>
+			<Component Id="MaterialDesignThemes.Wpf.dll" Guid="5d2293af-b77b-4e59-9043-26e17bdd9383">
+			  <File Id="MaterialDesignThemes.Wpf.dll" Name="MaterialDesignThemes.Wpf.dll" Source="$(var.Spotify.WPF_TargetDir)MaterialDesignThemes.Wpf.dll" />
+			</Component>
+			<Component Id="MaterialDesignColors.dll" Guid="5db30f2b-b9ed-4f6e-943d-5eafea559f8a">
+			  <File Id="MaterialDesignColors.dll" Name="MaterialDesignColors.dll" Source="$(var.Spotify.WPF_TargetDir)MaterialDesignColors.dll" />
+			</Component>
+			<Component Id="Newtonsoft.Json.dll" Guid="5643493d-38d8-4467-961f-6b0402600a57">
+			  <File Id="Newtonsoft.Json.dll" Name="Newtonsoft.Json.dll" Source="$(var.Spotify.WPF_TargetDir)Newtonsoft.Json.dll" />
 			</Component>
 		</ComponentGroup>
 	</Fragment>
