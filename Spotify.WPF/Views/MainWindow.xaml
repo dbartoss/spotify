@@ -23,12 +23,21 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.ColumnSpan="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
             <ProgressBar IsIndeterminate="True" />
         </StackPanel>
 
-        <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled" BorderBrush="Black">
-            <Grid>
+
+        <ScrollViewer Grid.Column="0" Grid.Row="1" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled" Margin="0 0 15 0">
+
+            <Border BorderBrush="Gray" BorderThickness="0 0 1 0" materialDesign:ShadowAssist.ShadowEdges="Right" materialDesign:ShadowAssist.ShadowDepth="Depth5">
+                
+            <Grid Margin="15 0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -38,6 +47,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
+
                 <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                     <materialDesign:PackIcon Kind="Spotify" Height="64" Width="64" VerticalAlignment="Center" Margin="0 10 0 0"/>
                     <TextBlock Height="50" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Margin="5 30 0 0">                    
@@ -45,7 +55,8 @@
                     </TextBlock>
                 </StackPanel>
 
-                <materialDesign:ColorZone Grid.Row="1" Mode="Standard" Padding="8 4 8 4" CornerRadius="2" Panel.ZIndex="1" Margin="10 60 10 60" materialDesign:ShadowAssist.ShadowDepth="Depth1">
+
+                <materialDesign:ColorZone Grid.Row="1" Mode="Standard" Padding="8 4 8 4" CornerRadius="2" Panel.ZIndex="1" Margin="10 60 10 30" materialDesign:ShadowAssist.ShadowDepth="Depth1">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" />
@@ -61,6 +72,7 @@
                 </materialDesign:ColorZone>
 
 
+
                 <Button Grid.Row="2" Width="Auto" Height="50" Margin="5" FontSize="16" FontWeight="Bold">STRONA GLOWNA</Button>
                 <Button Grid.Row="3" Width="auto" Height="50" Margin="5" FontSize="16" FontWeight="Bold">PRZEGLADAJ</Button>
                 <Button Grid.Row="4" Width="auto" Height="50" Margin="5" FontSize="16" FontWeight="Bold">PLAYLISTY</Button>
@@ -69,105 +81,41 @@
                 <StackPanel Grid.Row="5" VerticalAlignment="Bottom">
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom">
 
-                        <!--<Ellipse Height="64" Width="64">
-                            <Ellipse.Fill>
-                                <ImageBrush ImageSource=""/>
-                            </Ellipse.Fill>
-                        </Ellipse>-->
-						
+                        <Ellipse Height="64" Width="64">
+                                <Ellipse.Fill>
+                                    <ImageBrush>
+                                        <ImageBrush.ImageSource>
+                                            <BitmapImage DecodePixelWidth="64" DecodePixelHeight="64" UriSource="https://szkolaprogramowania.wsei.edu.pl/wp-content/uploads/2017/03/krzysztof-molenda-min.jpg?fbclid=IwAR1yStD8FsOJ2KETIIuzzWLrR8gU_k14pUs52-81qO18KHWPB87V7TgdUGY"/>
+                                        </ImageBrush.ImageSource>
+                                    </ImageBrush>
+                                </Ellipse.Fill>
+                        </Ellipse>
+
                         <TextBlock FontSize="18" Margin="0 10" VerticalAlignment="Bottom">                    
                             Krzysztof Molenda
                         </TextBlock>
                     </StackPanel>
-                    <Button Width="auto" Height="50" Margin="5 0 5 5" FontSize="16" FontWeight="Bold">Wyloguj</Button>
+
+                    
+                    <Button Click="LogOut" Width="auto" Height="50" Margin="5 0 5 5" FontSize="16" FontWeight="Bold">Wyloguj</Button>
+                    
                 </StackPanel>
+
             </Grid>
+            </Border>
         </ScrollViewer>
 
-        <Grid Grid.Column="1" Grid.ColumnSpan="2">
+
+
+        <Grid Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
-                <RowDefinition Height="2*" />
-                <RowDefinition Height="5*" />
+                <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0">
-                <Grid.Background>
-                    <ImageBrush/>
-                </Grid.Background>
-            </Grid>
 
-            <Grid Grid.Row="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+            <Frame x:Name="CurrentPage"/>            
 
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="15 0 0 0">
-                    <Button Style="{StaticResource MaterialDesignIconButton}" ToolTip="MaterialDesignIconButton" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
-                        <materialDesign:PackIcon Kind="Play" />
-                    </Button>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="15 0 0 0">
-                    <TextBlock Grid.Row="0" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold">CHUJ</TextBlock>
-                </StackPanel>
-
-                <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="15 0 0 0">
-                    <Button Style="{StaticResource MaterialDesignIconButton}" ToolTip="MaterialDesignIconButton" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
-                        <materialDesign:PackIcon Kind="Play" />
-                    </Button>
-                </StackPanel>
-                <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="15 0 0 0">
-                    <TextBlock Grid.Row="0" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold">CHUJ</TextBlock>
-                </StackPanel>
-
-                <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="15 0 0 0">
-                    <Button Style="{StaticResource MaterialDesignIconButton}" ToolTip="MaterialDesignIconButton" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
-                        <materialDesign:PackIcon Kind="Play" />
-                    </Button>
-                </StackPanel>
-                <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="15 0 0 0">
-                    <TextBlock Grid.Row="0" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold">CHUJ</TextBlock>
-                </StackPanel>
-
-                <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="15 0 0 0">
-                    <Button Style="{StaticResource MaterialDesignIconButton}" ToolTip="MaterialDesignIconButton" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
-                        <materialDesign:PackIcon Kind="Play" />
-                    </Button>
-                </StackPanel>
-                <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="15 0 0 0">
-                    <TextBlock Grid.Row="0" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold">CHUJ</TextBlock>
-                </StackPanel>
-
-                <StackPanel Grid.Row="4" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="15 0 0 0">
-                    <Button Style="{StaticResource MaterialDesignIconButton}" ToolTip="MaterialDesignIconButton" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
-                        <materialDesign:PackIcon Kind="Play" />
-                    </Button>
-                </StackPanel>
-                <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="15 0 0 0">
-                    <TextBlock Grid.Row="0" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold">CHUJ</TextBlock>
-                </StackPanel>
-
-
-                <StackPanel Grid.Row="0" Grid.Column="2" Grid.RowSpan="5" Margin="20 20 20 20" MinWidth="100" MinHeight="100" IsHitTestVisible="False">
-                    <StackPanel.Effect>
-                        <DropShadowEffect Color="#FF2E2C2C" BlurRadius="0" Opacity="0.2"/>
-                    </StackPanel.Effect>
-                    <StackPanel.Background>
-                        <ImageBrush ImageSource="../Assets/Shakira.jpg"/>
-                    </StackPanel.Background>
-                </StackPanel>
-
-            </Grid>
 
             <Grid Grid.Row="2" Height="120">
                 <Grid.RowDefinitions>
@@ -183,17 +131,21 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Row="1"  Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
 
+
                     <Button Style="{StaticResource MaterialDesignIconForegroundButton}" ToolTip="MaterialDesignIconForegroundButton">
                         <materialDesign:PackIcon Kind="FastRewind" />
                     </Button>
+
 
                     <Button Style="{StaticResource MaterialDesignFloatingActionButton}" materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"  materialDesign:ButtonProgressAssist.Value="-1" materialDesign:ButtonProgressAssist.IsIndeterminate="True">
                         <materialDesign:PackIcon Kind="PlayArrow" />
                     </Button>
 
+
                     <Button Style="{StaticResource MaterialDesignIconForegroundButton}" ToolTip="MaterialDesignIconForegroundButton">
                         <materialDesign:PackIcon Kind="FastForward" />
                     </Button>
+
 
                 </StackPanel>
                 <DockPanel Grid.Row="1" Grid.Column="3" Margin="0 0 15 0">

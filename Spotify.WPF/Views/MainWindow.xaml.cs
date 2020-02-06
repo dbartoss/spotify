@@ -1,5 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using Spotify.WPF.Views.Pages;
+
 namespace spotify
 {
     /// <summary>
@@ -10,6 +12,8 @@ namespace spotify
         public MainWindow()
         {            
             InitializeComponent();
+
+            CurrentPage.Content = new HomePage();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -45,6 +49,11 @@ namespace spotify
         private void ScrollViewer_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
         {
 
+        }
+
+        private void LogOut(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
