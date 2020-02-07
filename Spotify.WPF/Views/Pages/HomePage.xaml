@@ -22,107 +22,303 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="5*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
 
-        <Grid Grid.Row="0">
-            <Grid.Background>
-                <ImageBrush/>
-            </Grid.Background>
-        </Grid>
-
-
-        <Grid Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" FontSize="25" FontWeight="Bold" Margin="15">
+                            Najpopularniejsze w tym tygodniu:
+        </TextBlock>
 
 
 
-            <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="15 0 0 0">
-                <Button Style="{StaticResource MaterialDesignIconButton}" ToolTip="MaterialDesignIconButton" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
-                    <materialDesign:PackIcon Kind="Play" />
-                </Button>
-            </StackPanel>
-            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="15 0 0 0">
-                <TextBlock Grid.Row="0" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold">
-                    Song1
-                </TextBlock>
-            </StackPanel>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto" Margin="0 0 15 0">
+            <WrapPanel>
+
+                <materialDesign:Card Width="150" Height="160" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                    <Grid>
+                        <Grid.Background>
+                            <SolidColorBrush Color="Transparent"></SolidColorBrush>
+                        </Grid.Background>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image Source="https://i.scdn.co/image/5ede30313c461d7ed0f5c4f3dea484fd349d49a9" Height="110" Width="150" Stretch="UniformToFill" />
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 -20">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1" Margin="0 25 0 0" HorizontalAlignment="Center">
+                            <TextBlock FontWeight="Bold" FontSize="14" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" TextAlignment="Center" Margin="5 0">
+                                    Dawid Pasieka
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+
+                <materialDesign:Card Width="150" Height="160" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                    <Grid>
+                        <Grid.Background>
+                            <SolidColorBrush Color="Transparent"></SolidColorBrush>
+                        </Grid.Background>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image Source="https://i.scdn.co/image/5ede30313c461d7ed0f5c4f3dea484fd349d49a9" Height="110" Width="150" Stretch="UniformToFill" />
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 -20">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1" Margin="0 25 0 0" HorizontalAlignment="Center">
+                            <TextBlock FontWeight="Bold" FontSize="14" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" TextAlignment="Center" Margin="5 0">
+                                    Dawid Pasieka
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+
+                <materialDesign:Card Width="150" Height="160" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                    <Grid>
+                        <Grid.Background>
+                            <SolidColorBrush Color="Transparent"></SolidColorBrush>
+                        </Grid.Background>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image Source="https://i.scdn.co/image/5ede30313c461d7ed0f5c4f3dea484fd349d49a9" Height="110" Width="150" Stretch="UniformToFill" />
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 -20">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1" Margin="0 25 0 0" HorizontalAlignment="Center">
+                            <TextBlock FontWeight="Bold" FontSize="14" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" TextAlignment="Center" Margin="5 0">
+                                    Dawid Pasieka
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+
+                <materialDesign:Card Width="150" Height="160" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                    <Grid>
+                        <Grid.Background>
+                            <SolidColorBrush Color="Transparent"></SolidColorBrush>
+                        </Grid.Background>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image Source="https://i.scdn.co/image/5ede30313c461d7ed0f5c4f3dea484fd349d49a9" Height="110" Width="150" Stretch="UniformToFill" />
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 -20">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1" Margin="0 25 0 0" HorizontalAlignment="Center">
+                            <TextBlock FontWeight="Bold" FontSize="14" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" TextAlignment="Center" Margin="5 0">
+                                    Dawid Pasieka
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+
+                <materialDesign:Card Width="150" Height="160" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                    <Grid>
+                        <Grid.Background>
+                            <SolidColorBrush Color="Transparent"></SolidColorBrush>
+                        </Grid.Background>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image Source="https://i.scdn.co/image/5ede30313c461d7ed0f5c4f3dea484fd349d49a9" Height="110" Width="150" Stretch="UniformToFill" />
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 -20">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1" Margin="0 25 0 0" HorizontalAlignment="Center">
+                            <TextBlock FontWeight="Bold" FontSize="14" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" TextAlignment="Center" Margin="5 0">
+                                    Dawid Pasieka
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+
+                <materialDesign:Card Width="150" Height="160" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                    <Grid>
+                        <Grid.Background>
+                            <SolidColorBrush Color="Transparent"></SolidColorBrush>
+                        </Grid.Background>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image Source="https://i.scdn.co/image/5ede30313c461d7ed0f5c4f3dea484fd349d49a9" Height="110" Width="150" Stretch="UniformToFill" />
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 -20">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1" Margin="0 25 0 0" HorizontalAlignment="Center">
+                            <TextBlock FontWeight="Bold" FontSize="14" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" TextAlignment="Center" Margin="5 0">
+                                    Dawid Pasieka
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+
+            </WrapPanel>
+
+        </ScrollViewer>
 
 
-            <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="15 0 0 0">
-                <Button Style="{StaticResource MaterialDesignIconButton}" ToolTip="MaterialDesignIconButton" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
-                    <materialDesign:PackIcon Kind="Play" />
-                </Button>
-            </StackPanel>
-            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="15 0 0 0">
-                <TextBlock Grid.Row="0" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold">
-                    Song2
-                </TextBlock>
-            </StackPanel>
+
+        <TextBlock Grid.Row="2" FontSize="25" FontWeight="Bold" Margin="15">
+                            Ostatnio grane:
+        </TextBlock>
 
 
-            <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="15 0 0 0">
-                <Button Style="{StaticResource MaterialDesignIconButton}" ToolTip="MaterialDesignIconButton" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
-                    <materialDesign:PackIcon Kind="Play" />
-                </Button>
-            </StackPanel>
-            <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="15 0 0 0">
-                <TextBlock Grid.Row="0" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold">
-                    Song3
-                </TextBlock>
-            </StackPanel>
+        <ScrollViewer Grid.Row="3" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto" Margin="0 0 15 0">
+            <WrapPanel>
+
+                <materialDesign:Card Width="150" Height="160" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                    <Grid>
+                        <Grid.Background>
+                            <SolidColorBrush Color="Transparent"></SolidColorBrush>
+                        </Grid.Background>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image Source="https://i.scdn.co/image/5ede30313c461d7ed0f5c4f3dea484fd349d49a9" Height="110" Width="150" Stretch="UniformToFill" />
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 -20">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1" Margin="0 25 0 0" HorizontalAlignment="Center">
+                            <TextBlock FontWeight="Bold" FontSize="14" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" TextAlignment="Center" Margin="5 0">
+                                    Dawid Pasieka
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+
+                <materialDesign:Card Width="150" Height="160" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                    <Grid>
+                        <Grid.Background>
+                            <SolidColorBrush Color="Transparent"></SolidColorBrush>
+                        </Grid.Background>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image Source="https://i.scdn.co/image/5ede30313c461d7ed0f5c4f3dea484fd349d49a9" Height="110" Width="150" Stretch="UniformToFill" />
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 -20">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1" Margin="0 25 0 0" HorizontalAlignment="Center">
+                            <TextBlock FontWeight="Bold" FontSize="14" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" TextAlignment="Center" Margin="5 0">
+                                    Dawid Pasieka
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+
+                <materialDesign:Card Width="150" Height="160" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                    <Grid>
+                        <Grid.Background>
+                            <SolidColorBrush Color="Transparent"></SolidColorBrush>
+                        </Grid.Background>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image Source="https://i.scdn.co/image/5ede30313c461d7ed0f5c4f3dea484fd349d49a9" Height="110" Width="150" Stretch="UniformToFill" />
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 -20">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1" Margin="0 25 0 0" HorizontalAlignment="Center">
+                            <TextBlock FontWeight="Bold" FontSize="14" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" TextAlignment="Center" Margin="5 0">
+                                    Dawid Pasieka
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+
+                <materialDesign:Card Width="150" Height="160" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                    <Grid>
+                        <Grid.Background>
+                            <SolidColorBrush Color="Transparent"></SolidColorBrush>
+                        </Grid.Background>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image Source="https://i.scdn.co/image/5ede30313c461d7ed0f5c4f3dea484fd349d49a9" Height="110" Width="150" Stretch="UniformToFill" />
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 -20">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1" Margin="0 25 0 0" HorizontalAlignment="Center">
+                            <TextBlock FontWeight="Bold" FontSize="14" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" TextAlignment="Center" Margin="5 0">
+                                    Dawid Pasieka
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+
+                <materialDesign:Card Width="150" Height="160" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                    <Grid>
+                        <Grid.Background>
+                            <SolidColorBrush Color="Transparent"></SolidColorBrush>
+                        </Grid.Background>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image Source="https://i.scdn.co/image/5ede30313c461d7ed0f5c4f3dea484fd349d49a9" Height="110" Width="150" Stretch="UniformToFill" />
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 -20">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1" Margin="0 25 0 0" HorizontalAlignment="Center">
+                            <TextBlock FontWeight="Bold" FontSize="14" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" TextAlignment="Center" Margin="5 0">
+                                    Dawid Pasieka
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+
+                <materialDesign:Card Width="150" Height="160" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                    <Grid>
+                        <Grid.Background>
+                            <SolidColorBrush Color="Transparent"></SolidColorBrush>
+                        </Grid.Background>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image Source="https://i.scdn.co/image/5ede30313c461d7ed0f5c4f3dea484fd349d49a9" Height="110" Width="150" Stretch="UniformToFill" />
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 -20">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1" Margin="0 25 0 0" HorizontalAlignment="Center">
+                            <TextBlock FontWeight="Bold" FontSize="14" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" TextAlignment="Center" Margin="5 0">
+                                    Dawid Pasieka
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
 
 
-            <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="15 0 0 0">
-                <Button Style="{StaticResource MaterialDesignIconButton}" ToolTip="MaterialDesignIconButton" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
-                    <materialDesign:PackIcon Kind="Play" />
-                </Button>
-            </StackPanel>
-            <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="15 0 0 0">
-                <TextBlock Grid.Row="0" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold">
-                    Song4
-                </TextBlock>
-            </StackPanel>
+            </WrapPanel>
 
-
-            <StackPanel Grid.Row="4" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="15 0 0 0">
-                <Button Style="{StaticResource MaterialDesignIconButton}" ToolTip="MaterialDesignIconButton" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
-                    <materialDesign:PackIcon Kind="Play" />
-                </Button>
-            </StackPanel>
-            <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="15 0 0 0">
-                <TextBlock Grid.Row="0" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold">
-                    Song5
-                </TextBlock>
-            </StackPanel>
-
-
-
-            <StackPanel Grid.Row="0" Grid.Column="2" Grid.RowSpan="5" Margin="60 30 60 30" MinWidth="100" MinHeight="100" IsHitTestVisible="False">
-                <StackPanel.Effect>
-                    <DropShadowEffect Color="#FF2E2C2C" BlurRadius="0" Opacity="0.2"/>
-                </StackPanel.Effect>
-                <StackPanel.Background>
-                    <ImageBrush ImageSource="../../Assets/Shakira.jpg"/>
-                </StackPanel.Background>
-            </StackPanel>
-
-        </Grid>
-
-
+        </ScrollViewer>
     </Grid>
 </Page>

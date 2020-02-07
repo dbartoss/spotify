@@ -118,6 +118,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\Pages\ArtistPage.xaml.cs">
+      <DependentUpon>ArtistPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pages\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
@@ -126,9 +129,6 @@
     </Compile>
     <Compile Include="Views\Pages\SearchArtistsPage.xaml.cs">
       <DependentUpon>SearchArtistsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Pages\SearchPage.xaml.cs">
-      <DependentUpon>SearchPage.xaml</DependentUpon>
     </Compile>
     <Page Include="LoginDialog.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -150,6 +150,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Pages\ArtistPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Pages\HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -159,10 +163,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Pages\SearchArtistsPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Pages\SearchPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
