@@ -12,6 +12,8 @@ namespace spotify
         public MainWindow()
         {
             InitializeComponent();
+
+            CurrentPage.Content = new HomePage();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -63,6 +65,11 @@ namespace spotify
         {
             CurrentPage.Content = new SearchArtistsPage();
         }
+
+        //private void NavigateToArtistPage(object sender, RoutedEventArgs e)
+        //{
+        //    SearchArtistsPage.Content = new ArtistPage();
+        //}
 
         private void LogOut(object sender, RoutedEventArgs e)
         {

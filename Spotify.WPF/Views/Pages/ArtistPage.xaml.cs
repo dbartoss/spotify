@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Spotify.WPF.Views.Pages
 {
     /// <summary>
-    /// Logika interakcji dla klasy SearchPage.xaml
+    /// Interaction logic for ArtistPage.xaml
     /// </summary>
-    public partial class SearchPage : Page
+    public partial class ArtistPage : Page
     {
-        public SearchPage()
+        public ArtistPage()
         {
             InitializeComponent();
         }
