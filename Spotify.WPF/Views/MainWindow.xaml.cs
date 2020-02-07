@@ -12,10 +12,6 @@ namespace spotify
         public MainWindow()
         {
             InitializeComponent();
-
-            //CurrentPage.Content = new HomePage();
-            //CurrentPage.Content = new SearchArtistsPage();
-            //CurrentPage.Content = new PlaylistsPage();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
