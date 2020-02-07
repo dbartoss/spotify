@@ -1,0 +1,294 @@
+﻿<Page x:Class="Spotify.WPF.Views.Pages.SearchArtistsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Spotify.WPF.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SearchArtistsPage"
+    
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      TextOptions.TextFormattingMode="Ideal" 
+      TextOptions.TextRenderingMode="Auto"        
+      Background="{DynamicResource MaterialDesignPaper}"
+      FontFamily="{DynamicResource MaterialDesignFont}">
+
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border BorderBrush="Gray" BorderThickness="0 0 1 0" materialDesign:ShadowAssist.ShadowEdges="Right" materialDesign:ShadowAssist.ShadowDepth="Depth5">
+
+            <Grid>
+                <TextBlock FontSize="40" Margin="20" VerticalAlignment="Center" FontWeight="Bold">
+                    SEARCH ARTISTS: (10)
+                </TextBlock>
+            </Grid>
+
+        </Border>
+
+
+
+
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+
+            <Grid Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+                <materialDesign:Card Grid.Row="1" Width="100" Height="100">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1">
+                            <TextBlock FontWeight="Bold" FontSize="10" HorizontalAlignment="Center">
+                                Krzysztof Krawczyk
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="8" HorizontalAlignment="Center">
+                                A great artist.
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+            </Grid>
+
+
+            <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+                <materialDesign:Card Grid.Row="1" Width="100" Height="100">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1">
+                            <TextBlock FontWeight="Bold" FontSize="10" HorizontalAlignment="Center">
+                                Krzysztof Krawczyk
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="8" HorizontalAlignment="Center">
+                                A great artist.
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+            </Grid>
+
+
+            <Grid Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+                <materialDesign:Card Grid.Row="1" Width="100" Height="100">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1">
+                            <TextBlock FontWeight="Bold" FontSize="10" HorizontalAlignment="Center">
+                                Krzysztof Krawczyk
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="8" HorizontalAlignment="Center">
+                                A great artist.
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+            </Grid>
+
+
+            <Grid Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+                <materialDesign:Card Grid.Row="1" Width="100" Height="100">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1">
+                            <TextBlock FontWeight="Bold" FontSize="10" HorizontalAlignment="Center">
+                                Krzysztof Krawczyk
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="8" HorizontalAlignment="Center">
+                                A great artist.
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+            </Grid>
+
+
+            <Grid Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+                <materialDesign:Card Grid.Row="1" Width="100" Height="100">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1">
+                            <TextBlock FontWeight="Bold" FontSize="10" HorizontalAlignment="Center">
+                                Krzysztof Krawczyk
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="8" HorizontalAlignment="Center">
+                                A great artist.
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+            </Grid>
+
+
+
+
+            <Grid Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+                <materialDesign:Card Grid.Row="1" Width="100" Height="100">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1">
+                            <TextBlock FontWeight="Bold" FontSize="10" HorizontalAlignment="Center">
+                                Krzysztof Krawczyk
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="8" HorizontalAlignment="Center">
+                                A great artist.
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+            </Grid>
+
+
+            <Grid Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+                <materialDesign:Card Grid.Row="1" Width="100" Height="100">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1">
+                            <TextBlock FontWeight="Bold" FontSize="10" HorizontalAlignment="Center">
+                                Krzysztof Krawczyk
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="8" HorizontalAlignment="Center">
+                                A great artist.
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+            </Grid>
+
+
+            <Grid Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+                <materialDesign:Card Grid.Row="1" Width="100" Height="100">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1">
+                            <TextBlock FontWeight="Bold" FontSize="10" HorizontalAlignment="Center">
+                                Krzysztof Krawczyk
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="8" HorizontalAlignment="Center">
+                                A great artist.
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+            </Grid>
+
+
+            <Grid Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+                <materialDesign:Card Grid.Row="1" Width="100" Height="100">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1">
+                            <TextBlock FontWeight="Bold" FontSize="10" HorizontalAlignment="Center">
+                                Krzysztof Krawczyk
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="8" HorizontalAlignment="Center">
+                                A great artist.
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+            </Grid>
+
+
+            <Grid Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+                <materialDesign:Card Grid.Row="1" Width="100" Height="100">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="PlayArrow" />
+                        </Button>
+                        <StackPanel Grid.Row="1">
+                            <TextBlock FontWeight="Bold" FontSize="10" HorizontalAlignment="Center">
+                                Krzysztof Krawczyk
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="8" HorizontalAlignment="Center">
+                                A great artist.
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</Page>

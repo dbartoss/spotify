@@ -10,12 +10,8 @@ namespace spotify
     public partial class MainWindow : Window
     {
         public MainWindow()
-        {            
+        {
             InitializeComponent();
-
-            CurrentPage.Content = new HomePage();
-
-            //CurrentPage.Content = new SearchResultsPage();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -51,6 +47,21 @@ namespace spotify
         private void ScrollViewer_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
         {
 
+        }
+
+        private void NavigateToHomePage(object sender, RoutedEventArgs e)
+        {
+            CurrentPage.Content = new HomePage();
+        }
+
+        private void NavigateToPlaylistsPage(object sender, RoutedEventArgs e)
+        {
+            CurrentPage.Content = new PlaylistsPage();
+        }
+
+        private void NavigateToSearchArtistsPage(object sender, RoutedEventArgs e)
+        {
+            CurrentPage.Content = new SearchArtistsPage();
         }
 
         private void LogOut(object sender, RoutedEventArgs e)
