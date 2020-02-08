@@ -1,6 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using Spotify.ClassLibrary;
+using System.Threading.Tasks;
 using System.Windows;
-using Spotify.ClassLibrary;
 
 namespace spotify
 {
@@ -9,12 +9,27 @@ namespace spotify
     /// </summary>
     public partial class LoginDialog : Window
     {
+        #region Private Fields
+
         private Authorization _authorization = Authorization.Instance;
         private SpotifyAPI _spotify = new SpotifyAPI();
+
+        #endregion Private Fields
+
+        #region Public Constructors
 
         public LoginDialog()
         {
             InitializeComponent();
+        }
+
+        #endregion Public Constructors
+
+        #region Private Methods
+
+        private async Task<AuthResponse> Authorize(string url)
+        {
+            return await _spotify.GetAuthCredentials(url);
         }
 
         private async void HandleNavigation(object sender, System.Windows.Navigation.NavigatingCancelEventArgs e)
@@ -30,18 +45,13 @@ namespace spotify
             }
         }
 
-        private async Task<AuthResponse> Authorize(string url)
-        {
-            return await _spotify.GetAuthCredentials(url);
-        }
-
-
         private void NavigateToApp()
         {
             Window mainWindow = new MainWindow();
             mainWindow.Show();
             Close();
         }
-    }
 
+        #endregion Private Methods
+    }
 }

@@ -4,11 +4,11 @@ namespace Spotify.ClassLibrary
 {
     public class AuthResponse
     {
-        public bool Success { get; private set; }
-        public string AccessToken { get; private set; }
-        public string RefreshToken { get; private set; }
+        #region Public Constructors
 
-        public AuthResponse() { }
+        public AuthResponse()
+        {
+        }
 
         [JsonConstructor]
         public AuthResponse(bool success, string access_token, string refresh_token)
@@ -17,5 +17,15 @@ namespace Spotify.ClassLibrary
             AccessToken = access_token;
             RefreshToken = refresh_token;
         }
+
+        #endregion Public Constructors
+
+        #region Public Properties
+
+        public string AccessToken { get; private set; }
+        public string RefreshToken { get; private set; }
+        public bool Success { get; private set; }
+
+        #endregion Public Properties
     }
 }

@@ -2,15 +2,25 @@
 {
     public class AuthCredentials
     {
-        public string AccessToken { get; private set; }
-        public string RefreshToken { get; private set; }
+        #region Public Constructors
 
-        public AuthCredentials() {}
+        public AuthCredentials()
+        {
+        }
 
         public AuthCredentials(AuthResponse credentials)
         {
             AccessToken = credentials.AccessToken;
             RefreshToken = credentials.RefreshToken;
         }
+
+        #endregion Public Constructors
+
+        #region Public Properties
+
+        public string AccessToken { get; private set; }
+        public string RefreshToken { get; private set; }
+
+        #endregion Public Properties
     }
 }
