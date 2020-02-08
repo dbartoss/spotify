@@ -73,32 +73,26 @@
 
 
 
-                    <Button Click="NavigateToHomePage" Grid.Row="2" Width="Auto" Height="50" Margin="5" FontSize="16" FontWeight="Bold">STRONA GLOWNA</Button>
-                    <Button Click="NavigateToSearchArtistsPage" Grid.Row="3" Width="auto" Height="50" Margin="5" FontSize="16" FontWeight="Bold">PRZEGLADAJ</Button>
-                    <Button Click="NavigateToPlaylistsPage" Grid.Row="4" Width="auto" Height="50" Margin="5" FontSize="16" FontWeight="Bold">PLAYLISTY</Button>
-
-                    <StackPanel Grid.Row="5" VerticalAlignment="Bottom">
-                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom">
-
-                            <Ellipse Height="64" Width="64">
-                                <Ellipse.Fill>
-                                    <ImageBrush>
-                                        <ImageBrush.ImageSource>
-                                            <BitmapImage DecodePixelWidth="64" DecodePixelHeight="64" UriSource="https://www.national-geographic.pl/media/cache/default_view/uploads/media/default/0012/70/nie-uwierzysz-jak-powstalo-najslynniejsze-zdjecie-einsteina-przeczytaj-historie.jpeg"/>
-                                        </ImageBrush.ImageSource>
-                                    </ImageBrush>
-                                </Ellipse.Fill>
-                            </Ellipse>
-
-                            <TextBlock FontSize="18" Margin="0 10" VerticalAlignment="Bottom">                    
-                            Tomasz Bartosz
-                            </TextBlock>
+                    <Button Click="NavigateToHomePage" Style="{StaticResource MaterialDesignFlatButton}" Grid.Row="2" Width="Auto" Height="50" Margin="5" FontSize="16" FontWeight="Bold" Background="Transparent" Foreground="White">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150">
+                            <materialDesign:PackIcon Kind="HouseVariant" Margin="0 0 10 0" Width="25" Height="25" VerticalAlignment="Center"/>
+                            <TextBlock VerticalAlignment="Center">Strona glowna</TextBlock>
                         </StackPanel>
+                    </Button>
 
+                    <Button Click="NavigateToSearchArtistsPage" Style="{StaticResource MaterialDesignFlatButton}" Grid.Row="3" Width="auto" Height="50" Margin="5" FontSize="16" FontWeight="Bold" Background="Transparent" Foreground="White">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Width="150">
+                            <materialDesign:PackIcon Kind="Folders" Margin="0 0 10 0" Width="25" Height="25" VerticalAlignment="Center"/>
+                            <TextBlock VerticalAlignment="Center">Przegladaj</TextBlock>
+                        </StackPanel>
+                    </Button>
 
-                        <Button Click="LogOut" Width="auto" Height="50" Margin="5 0 5 5" FontSize="16" FontWeight="Bold">Wyloguj</Button>
-
-                    </StackPanel>
+                    <Button Click="NavigateToPlaylistsPage" Style="{StaticResource MaterialDesignFlatButton}" Grid.Row="4" Width="auto" Height="50" Margin="5" FontSize="16" FontWeight="Bold" Background="Transparent" Foreground="White">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150">
+                            <materialDesign:PackIcon Kind="LibraryMusic" Margin="0 0 10 0" Width="25" Height="25" VerticalAlignment="Center"/>
+                            <TextBlock VerticalAlignment="Center">Playlisty</TextBlock>
+                        </StackPanel>
+                    </Button>
 
                     <StackPanel Grid.Row="5" VerticalAlignment="Bottom">
                         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom">
@@ -119,7 +113,16 @@
                         </StackPanel>
 
 
-                        <Button Click="LogOut" Width="auto" Height="50" Margin="5 0 5 5" FontSize="16" FontWeight="Bold">Wyloguj</Button>
+
+
+                        <Button Click="LogOut" Grid.Row="4" Width="auto" Height="50" Margin="0 10" FontSize="16" FontWeight="Bold">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="95">
+                                <materialDesign:PackIcon Kind="Lock" Margin="0 0 5 0" Width="25" Height="25" VerticalAlignment="Center"/>
+                                <TextBlock VerticalAlignment="Center">Wyloguj</TextBlock>
+                            </StackPanel>
+                        </Button>
+
+
 
                     </StackPanel>
 
@@ -186,7 +189,7 @@
 
 
 
-                    <StackPanel Grid.Row="1" Grid.Column="3" Margin="0 0 15 0" Orientation="Horizontal" HorizontalAlignment="Center">                        
+                    <StackPanel Grid.Row="1" Grid.Column="3" Margin="0 0 15 0" Orientation="Horizontal" HorizontalAlignment="Center">
                         <materialDesign:PackIcon Kind="VolumeMedium" VerticalAlignment="Bottom" Margin="0 0 0 3"/>
                         <Slider  VerticalAlignment="Center" Width="120" Value="50" Minimum="0" Maximum="100" Style="{StaticResource MaterialDesignDiscreteSlider}"/>
                     </StackPanel>
