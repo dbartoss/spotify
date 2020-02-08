@@ -1,55 +1,49 @@
 ﻿<Page x:Class="Spotify.WPF.Views.Pages.ArtistPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Spotify.WPF.Views.Pages"
-      mc:Ignorable="d" 
+      mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ArtistPage"
-      
+
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-      
+
       TextElement.Foreground="{DynamicResource MaterialDesignBody}"
       TextElement.FontWeight="Regular"
       TextElement.FontSize="13"
-      TextOptions.TextFormattingMode="Ideal" 
-      TextOptions.TextRenderingMode="Auto"        
+      TextOptions.TextFormattingMode="Ideal"
+      TextOptions.TextRenderingMode="Auto"
       Background="{DynamicResource MaterialDesignPaper}"
       FontFamily="{DynamicResource MaterialDesignFont}">
 
-
-
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="5*"/>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="5*" />
         </Grid.RowDefinitions>
-
 
         <Grid Grid.Row="0">
             <Grid.Background>
-                <ImageBrush/>
+                <ImageBrush />
             </Grid.Background>
         </Grid>
 
-
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-
-
 
             <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="15 0 0 0">
                 <Button Style="{StaticResource MaterialDesignIconButton}" ToolTip="MaterialDesignIconButton" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
@@ -62,7 +56,6 @@
                 </TextBlock>
             </StackPanel>
 
-
             <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="15 0 0 0">
                 <Button Style="{StaticResource MaterialDesignIconButton}" ToolTip="MaterialDesignIconButton" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
                     <materialDesign:PackIcon Kind="Play" />
@@ -73,7 +66,6 @@
                     Song2
                 </TextBlock>
             </StackPanel>
-
 
             <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="15 0 0 0">
                 <Button Style="{StaticResource MaterialDesignIconButton}" ToolTip="MaterialDesignIconButton" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
@@ -86,7 +78,6 @@
                 </TextBlock>
             </StackPanel>
 
-
             <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="15 0 0 0">
                 <Button Style="{StaticResource MaterialDesignIconButton}" ToolTip="MaterialDesignIconButton" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
                     <materialDesign:PackIcon Kind="Play" />
@@ -97,7 +88,6 @@
                     Song4
                 </TextBlock>
             </StackPanel>
-
 
             <StackPanel Grid.Row="4" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="15 0 0 0">
                 <Button Style="{StaticResource MaterialDesignIconButton}" ToolTip="MaterialDesignIconButton" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
@@ -110,19 +100,14 @@
                 </TextBlock>
             </StackPanel>
 
-
-
             <StackPanel Grid.Row="0" Grid.Column="2" Grid.RowSpan="5" Margin="60 30 60 30" MinWidth="100" MinHeight="100" IsHitTestVisible="False">
                 <StackPanel.Effect>
-                    <DropShadowEffect Color="#FF2E2C2C" BlurRadius="0" Opacity="0.2"/>
+                    <DropShadowEffect Color="#FF2E2C2C" BlurRadius="0" Opacity="0.2" />
                 </StackPanel.Effect>
                 <StackPanel.Background>
-                    <ImageBrush ImageSource="../../Assets/Shakira.jpg"/>
+                    <ImageBrush ImageSource="../../Assets/Shakira.jpg" />
                 </StackPanel.Background>
             </StackPanel>
-
         </Grid>
-
-
     </Grid>
 </Page>

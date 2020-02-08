@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Spotify.ClassLibrary.Search
+﻿namespace Spotify.ClassLibrary.Search
 {
-    class Artist
+    internal class Artist
     {
     }
 }

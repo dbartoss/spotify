@@ -1,10 +1,8 @@
 ﻿using System.Reflection;
-using System.Resources;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
 
-// Ogólne informacje o zestawie są kontrolowane poprzez następujący 
+// Ogólne informacje o zestawie są kontrolowane poprzez następujący
 // zestaw atrybutów. Zmień wartości tych atrybutów, aby zmodyfikować informacje
 // powiązane z zestawem.
 [assembly: AssemblyTitle("spotify")]
@@ -30,7 +28,6 @@ using System.Windows;
 
 //[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]
 
-
 [assembly: ThemeInfo(
     ResourceDictionaryLocation.None, //gdzie znajdują się słowniki zasobów specyficznych dla motywów
                                      //(używane, jeśli nie można odnaleźć zasobu na stronie,
@@ -39,7 +36,6 @@ using System.Windows;
                                               //(używane, jeśli nie można odnaleźć zasobu na stronie,
                                               // aplikacji lub słowników zasobów specyficznych dla motywów)
 )]
-
 
 // Informacje o wersji zestawu zawierają następujące cztery wartości:
 //
