@@ -1,8 +1,16 @@
-﻿namespace spotify
-{
-    using Spotify.WPF.Views.Pages;
+﻿    using Spotify.WPF.Views.Pages;
     using System.Windows;
     using System.Windows.Controls;
+    using System;
+    using System.Media;
+    using System.Windows.Media;
+    using Microsoft.Win32;
+    using MaterialDesignThemes.Wpf;
+
+
+
+namespace spotify
+{
 
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
@@ -16,7 +24,7 @@
         /// </summary>
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();            
 
             CurrentPage.Content = new HomePage();
         }
@@ -172,5 +180,14 @@
         }
 
         #endregion Private Methods
+
+                       
+
+        //private void btnPlay(object sender, RoutedEventArgs e)
+        //{
+        //    string song = (string)sender;
+
+        //    bunifuMediaPlayer1.player.URL = song;
+        //}
     }
 }

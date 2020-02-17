@@ -25,8 +25,11 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
+            <Grid.Effect>
+                <BlurEffect Radius="15"/>
+            </Grid.Effect>
             <Grid.Background>
-                <ImageBrush />
+                <ImageBrush ImageSource="https://images.wallpapersden.com/image/wxl-shakira_59223.jpg"  />
             </Grid.Background>
         </Grid>
 
@@ -42,6 +45,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
@@ -51,8 +55,13 @@
                 </Button>
             </StackPanel>
             <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="15 0 0 0">
-                <TextBlock Grid.Row="0" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold">
+                <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold">
                     Song1
+                </TextBlock>
+            </StackPanel>
+            <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="15 0 0 0">
+                <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="Gray">
+                    3:21
                 </TextBlock>
             </StackPanel>
 
@@ -66,6 +75,11 @@
                     Song2
                 </TextBlock>
             </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="15 0 0 0">
+                <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="Gray">
+                    3:21
+                </TextBlock>
+            </StackPanel>
 
             <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="15 0 0 0">
                 <Button Style="{StaticResource MaterialDesignIconButton}" ToolTip="MaterialDesignIconButton" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
@@ -75,6 +89,11 @@
             <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="15 0 0 0">
                 <TextBlock Grid.Row="0" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold">
                     Song3
+                </TextBlock>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="15 0 0 0">
+                <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="Gray">
+                    3:21
                 </TextBlock>
             </StackPanel>
 
@@ -88,6 +107,11 @@
                     Song4
                 </TextBlock>
             </StackPanel>
+            <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="15 0 0 0">
+                <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="Gray">
+                    3:21
+                </TextBlock>
+            </StackPanel>
 
             <StackPanel Grid.Row="4" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="15 0 0 0">
                 <Button Style="{StaticResource MaterialDesignIconButton}" ToolTip="MaterialDesignIconButton" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
@@ -99,13 +123,18 @@
                     Song5
                 </TextBlock>
             </StackPanel>
+            <StackPanel Grid.Row="4" Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="15 0 0 0">
+                <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="Gray">
+                    3:21
+                </TextBlock>
+            </StackPanel>
 
-            <StackPanel Grid.Row="0" Grid.Column="2" Grid.RowSpan="5" Margin="60 30 60 30" MinWidth="100" MinHeight="100" IsHitTestVisible="False">
+            <StackPanel Grid.Row="0" Grid.Column="3" Grid.RowSpan="5" Margin="80 30 40 30" MinWidth="100" MinHeight="100" IsHitTestVisible="False">
                 <StackPanel.Effect>
                     <DropShadowEffect Color="#FF2E2C2C" BlurRadius="0" Opacity="0.2" />
                 </StackPanel.Effect>
                 <StackPanel.Background>
-                    <ImageBrush ImageSource="../../Assets/Shakira.jpg" />
+                    <ImageBrush ImageSource="https://ocdn.eu/pulscms-transforms/1/8c-k9kuTURBXy9mYzllMDBjNC1kOTQ3LTQyNGQtYjA5OC1lMWE1OTU3NDE3MzEuanBlZ5GVAs0DBwDDw4GhMAE" />
                 </StackPanel.Background>
             </StackPanel>
         </Grid>

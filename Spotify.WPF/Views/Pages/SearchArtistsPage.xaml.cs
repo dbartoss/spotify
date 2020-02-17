@@ -7,6 +7,7 @@ namespace Spotify.WPF.Views.Pages
     /// </summary>
     public partial class SearchArtistsPage : Page
     {
+
         #region Public Constructors
 
         public SearchArtistsPage()
@@ -14,6 +15,15 @@ namespace Spotify.WPF.Views.Pages
             InitializeComponent();
         }
 
+        private void Hyperlink_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+
+        }
+
         #endregion Public Constructors
+
+        //public SearchArtistsPage() { Title.Text = ""; }
+        //public SearchArtistsPage(string title) { Title.Text = title; }        
+
     }
 }

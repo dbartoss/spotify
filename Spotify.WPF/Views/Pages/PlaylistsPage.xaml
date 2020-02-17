@@ -25,9 +25,13 @@
         </Grid.RowDefinitions>
 
         <Grid>
-            <TextBlock FontSize="40" Margin="20" VerticalAlignment="Center" FontWeight="Bold">
+            <TextBlock FontSize="40" FontWeight="Bold" VerticalAlignment="Center" Margin="5 0">
                     YOUR PLAYLISTS:
             </TextBlock>
+            
+            <!--<Grid.Background>
+                <ImageBrush ImageSource="https://lockpaperscissors.co/wp-content/uploads/spotify-theme-music-bkg-dark.png"  />
+            </Grid.Background>-->
         </Grid>
 
         <Grid Grid.Row="1">
@@ -43,7 +47,7 @@
                                     <RowDefinition Height="*" />
                                     <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
-                                <Image Source="Resources/Chartridge046_small.jpg" Height="90" Width="180" Stretch="UniformToFill" />
+                                <Image Source="https://www.freepnglogos.com/uploads/rock-png/home-natural-stone-company-greenville-big-rock-natural-29.png" Height="90" Width="180" Stretch="UniformToFill" />
                                 <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 16 -20">
                                     <materialDesign:PackIcon Kind="PlayArrow" />
                                 </Button>
@@ -64,7 +68,7 @@
                                     <RowDefinition Height="*" />
                                     <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
-                                <Image Source="Resources/Chartridge046_small.jpg" Height="90" Width="180" Stretch="UniformToFill" />
+                                <Image Height="90" Width="180" Stretch="UniformToFill" />
                                 <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 16 -20">
                                     <materialDesign:PackIcon Kind="PlayArrow" />
                                 </Button>
@@ -85,7 +89,7 @@
                                     <RowDefinition Height="*" />
                                     <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
-                                <Image Source="Resources/Chartridge046_small.jpg" Height="90" Width="180" Stretch="UniformToFill" />
+                                <Image Height="90" Width="180" Stretch="UniformToFill" />
                                 <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 16 -20">
                                     <materialDesign:PackIcon Kind="PlayArrow" />
                                 </Button>

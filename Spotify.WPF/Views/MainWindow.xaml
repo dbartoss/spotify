@@ -156,22 +156,27 @@
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2*" />
                         <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2*" />
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
 
-                    <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="40 0 0 0">
+                    <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left">
+                        <Image x:Name="ActiveSongImage" Height="64" Width="64"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="40 0 0 0">
                         <TextBlock Text="0:00" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </StackPanel>
 
-                    <StackPanel Grid.Row="1"  Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <StackPanel Grid.Row="1"  Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
 
                         <Button Style="{StaticResource MaterialDesignIconForegroundButton}" ToolTip="MaterialDesignIconForegroundButton">
                             <materialDesign:PackIcon Kind="FastRewind" />
                         </Button>
 
-                        <Button Style="{StaticResource MaterialDesignFloatingActionButton}" materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"  materialDesign:ButtonProgressAssist.Value="-1" materialDesign:ButtonProgressAssist.IsIndeterminate="True">
+                        <Button Style="{StaticResource MaterialDesignFloatingActionButton}" materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"  materialDesign:ButtonProgressAssist.Value="-1" materialDesign:ButtonProgressAssist.IsIndeterminate="False">
                             <materialDesign:PackIcon Kind="PlayArrow" />
                         </Button>
 
@@ -180,17 +185,26 @@
                         </Button>
                     </StackPanel>
 
-                    <StackPanel Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 40 0">
+                    <StackPanel Grid.Row="1" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 40 0">
                         <TextBlock Text="0:00" HorizontalAlignment="Center" VerticalAlignment="Center" />
                         <!--<TextBlock Text="{Binding ElementName=pbStatus, Path=Value, StringFormat={}{0:0}%}" HorizontalAlignment="Center" VerticalAlignment="Center" />-->
                     </StackPanel>
 
-                    <StackPanel Grid.Row="1" Grid.Column="3" Margin="0 0 15 0" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <StackPanel Grid.Row="1" Grid.Column="4" Margin="0 0 15 0" Orientation="Horizontal" HorizontalAlignment="Center">
                         <materialDesign:PackIcon Kind="VolumeMedium" VerticalAlignment="Bottom" Margin="0 0 0 3" />
                         <Slider  VerticalAlignment="Center" Width="120" Value="50" Minimum="0" Maximum="100" Style="{StaticResource MaterialDesignDiscreteSlider}" />
                     </StackPanel>
 
-                    <Slider Grid.Row="2" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="30 0 28 0" />
+                    <StackPanel Grid.Row="2" Grid.Column="0" Margin="0 2 0 0" HorizontalAlignment="Center">
+                        <TextBlock TextAlignment="Left" FontSize="10" TextTrimming="CharacterEllipsis">
+                            Brak wybranej piosenki
+                        </TextBlock>
+                        <!--<TextBlock TextAlignment="Left" FontSize="9" TextTrimming="CharacterEllipsis" Foreground="LightGray">
+                            Shakira
+                        </TextBlock>-->
+                    </StackPanel>
+
+                    <Slider Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="30 0 28 0" />
                 </Grid>
             </Border>
         </Grid>
