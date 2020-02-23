@@ -25,6 +25,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />
+    <Content Include="license.rtf" />
     <Content Include="packages.config" />
     <Content Include="Setup.wax" />
   </ItemGroup>
