@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:spotify"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             StartupUri="Views/MainWindow.xaml">
-    <!--StartupUri="LoginDialog.xaml">-->
+             StartupUri="LoginDialog.xaml">
+    <!--StartupUri="Views/MainWindow.xaml">-->
 
     <Application.Resources>
         <ResourceDictionary>
@@ -24,7 +24,7 @@
             <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#00c853" />
             <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="White" />
             <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#009624" />
-            <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="White" />
+
             <SolidColorBrush x:Key="SecondaryAccentBrush" Color="#76ff03" />
             <SolidColorBrush x:Key="SecondaryAccentForegroundBrush" Color="Black" />
         </ResourceDictionary>

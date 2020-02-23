@@ -24,80 +24,14 @@
             <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
 
-        <Grid>
-            <TextBlock FontSize="40" Margin="20" VerticalAlignment="Center" FontWeight="Bold">
-                    YOUR PLAYLISTS:
-            </TextBlock>
+        <Grid Grid.Row="0">
+            <TextBlock x:Name="TitleBlock" FontSize="40" Margin="20" VerticalAlignment="Center" FontWeight="Bold" />
         </Grid>
 
         <Grid Grid.Row="1">
 
-            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Margin="0 0 15 0">
-                <WrapPanel>
-
-                    <Grid Grid.Row="1">
-                        <materialDesign:Card Width="200" Height="200" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="110" />
-                                    <RowDefinition Height="*" />
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
-                                <Image Source="Resources/Chartridge046_small.jpg" Height="90" Width="180" Stretch="UniformToFill" />
-                                <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 16 -20">
-                                    <materialDesign:PackIcon Kind="PlayArrow" />
-                                </Button>
-                                <StackPanel Grid.Row="1" Margin="8 24 8 0">
-                                    <TextBlock FontWeight="Bold" FontSize="18" TextWrapping="Wrap">
-                                My Rock Playlist
-                                    </TextBlock>
-                                </StackPanel>
-                            </Grid>
-                        </materialDesign:Card>
-                    </Grid>
-
-                    <Grid Grid.Row="1">
-                        <materialDesign:Card Width="200" Height="200" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="110" />
-                                    <RowDefinition Height="*" />
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
-                                <Image Source="Resources/Chartridge046_small.jpg" Height="90" Width="180" Stretch="UniformToFill" />
-                                <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 16 -20">
-                                    <materialDesign:PackIcon Kind="PlayArrow" />
-                                </Button>
-                                <StackPanel Grid.Row="1" Margin="8 24 8 0">
-                                    <TextBlock FontWeight="Bold" FontSize="18" TextWrapping="Wrap">
-                                My Pop Playlist
-                                    </TextBlock>
-                                </StackPanel>
-                            </Grid>
-                        </materialDesign:Card>
-                    </Grid>
-
-                    <Grid Grid.Row="1">
-                        <materialDesign:Card Width="200" Height="200" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="110" />
-                                    <RowDefinition Height="*" />
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
-                                <Image Source="Resources/Chartridge046_small.jpg" Height="90" Width="180" Stretch="UniformToFill" />
-                                <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 16 -20">
-                                    <materialDesign:PackIcon Kind="PlayArrow" />
-                                </Button>
-                                <StackPanel Grid.Row="1" Margin="8 24 8 0">
-                                    <TextBlock FontWeight="Bold" FontSize="18" TextWrapping="Wrap">
-                                My Rap Playlist
-                                    </TextBlock>
-                                </StackPanel>
-                            </Grid>
-                        </materialDesign:Card>
-                    </Grid>
-                </WrapPanel>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Margin="0 0 15 0">
+                <WrapPanel x:Name="Playlists" />
             </ScrollViewer>
         </Grid>
     </Grid>

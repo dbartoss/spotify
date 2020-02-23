@@ -6,5 +6,5 @@
         mc:Ignorable="d"
         Height="650" Width="1050"
         WindowStartupLocation="CenterScreen">
-    <WebBrowser Source="http://localhost:3000/login" x:Name="Browser" Navigating="HandleNavigation" />
+    <WebBrowser  Source="http://localhost:3000/login" x:Name="Browser" Navigating="HandleNavigation" />
 </Window>
