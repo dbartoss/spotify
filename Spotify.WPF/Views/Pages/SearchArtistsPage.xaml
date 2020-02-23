@@ -25,234 +25,114 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0">
-            <Border BorderBrush="Gray" BorderThickness="0 0 1 0" materialDesign:ShadowAssist.ShadowEdges="All" materialDesign:ShadowAssist.ShadowDepth="Depth5">
-                <TextBlock FontSize="40" Margin="20" VerticalAlignment="Center" FontWeight="Bold">
-                    SEARCH ARTISTS: (10)
-                </TextBlock>
-            </Border>
+
+            <TextBlock FontSize="40" Margin="20" VerticalAlignment="Center" FontWeight="Bold">POLECANE:</TextBlock>
+
+            <!--<StackPanel.Background>
+                <ImageBrush ImageSource="https://lockpaperscissors.co/wp-content/uploads/spotify-theme-music-bkg-dark.png" />
+            </StackPanel.Background>-->
         </StackPanel>
 
-        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Margin="0 0 15 0">
-            <WrapPanel>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <WrapPanel HorizontalAlignment="Center">
 
-                <Grid Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
-                    <materialDesign:Card Grid.Row="1" Width="100" Height="100">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="60" />
-                                <RowDefinition Height="*" />
-                            </Grid.RowDefinitions>
-                            <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <materialDesign:PackIcon Kind="PlayArrow" />
-                            </Button>
-                            <StackPanel Grid.Row="1">
-                                <TextBlock FontWeight="Bold" FontSize="10" HorizontalAlignment="Center">
-                                Shakira
-                                </TextBlock>
-                                <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="8" HorizontalAlignment="Center">
-                                Pop
-                                </TextBlock>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Button Width="260" Height="260" Foreground="Transparent" Background="Transparent" BorderBrush="Transparent">
+                        <materialDesign:Card Width="225" Height="225" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                            <StackPanel>
+                                <Image Stretch="UniformToFill" Source="https://t.scdn.co/media/original/hip-274_0a661854d61e29eace5fe63f73495e68_274x274.jpg" />
+                                <TextBlock Margin="0 -75 0 0" Foreground="White" FontSize="18" TextAlignment="Center">Hip-Hop</TextBlock>
                             </StackPanel>
-                        </Grid>
-                    </materialDesign:Card>
+                        </materialDesign:Card>
+                    </Button>
                 </Grid>
 
-                <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
-                    <materialDesign:Card Grid.Row="1" Width="100" Height="100">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="60" />
-                                <RowDefinition Height="*" />
-                            </Grid.RowDefinitions>
-                            <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <materialDesign:PackIcon Kind="PlayArrow" />
-                            </Button>
-                            <StackPanel Grid.Row="1">
-                                <TextBlock FontWeight="Bold" FontSize="10" HorizontalAlignment="Center">
-                                Krzysztof Krawczyk
-                                </TextBlock>
-                                <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="8" HorizontalAlignment="Center">
-                                A great artist.
-                                </TextBlock>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Button Width="260" Height="260" Foreground="Transparent" Background="Transparent" BorderBrush="Transparent">
+                        <materialDesign:Card Width="225" Height="225" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                            <StackPanel>
+                                <Image Stretch="UniformToFill" Source="https://t.scdn.co/media/original/hip-274_0a661854d61e29eace5fe63f73495e68_274x274.jpg" />
+                                <TextBlock Margin="0 -75 0 0" Foreground="White" FontSize="18" TextAlignment="Center">Hip-Hop</TextBlock>
                             </StackPanel>
-                        </Grid>
-                    </materialDesign:Card>
+                        </materialDesign:Card>
+                    </Button>
                 </Grid>
 
-                <Grid Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
-                    <materialDesign:Card Grid.Row="1" Width="100" Height="100">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="60" />
-                                <RowDefinition Height="*" />
-                            </Grid.RowDefinitions>
-                            <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <materialDesign:PackIcon Kind="PlayArrow" />
-                            </Button>
-                            <StackPanel Grid.Row="1">
-                                <TextBlock FontWeight="Bold" FontSize="10" HorizontalAlignment="Center">
-                                Krzysztof Krawczyk
-                                </TextBlock>
-                                <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="8" HorizontalAlignment="Center">
-                                A great artist.
-                                </TextBlock>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Button Width="260" Height="260" Foreground="Transparent" Background="Transparent" BorderBrush="Transparent">
+                        <materialDesign:Card Width="225" Height="225" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                            <StackPanel>
+                                <Image Stretch="UniformToFill" Source="https://t.scdn.co/media/original/hip-274_0a661854d61e29eace5fe63f73495e68_274x274.jpg" />
+                                <TextBlock Margin="0 -75 0 0" Foreground="White" FontSize="18" TextAlignment="Center">Hip-Hop</TextBlock>
                             </StackPanel>
-                        </Grid>
-                    </materialDesign:Card>
+                        </materialDesign:Card>
+                    </Button>
                 </Grid>
 
-                <Grid Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
-                    <materialDesign:Card Grid.Row="1" Width="100" Height="100">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="60" />
-                                <RowDefinition Height="*" />
-                            </Grid.RowDefinitions>
-                            <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <materialDesign:PackIcon Kind="PlayArrow" />
-                            </Button>
-                            <StackPanel Grid.Row="1">
-                                <TextBlock FontWeight="Bold" FontSize="10" HorizontalAlignment="Center">
-                                Krzysztof Krawczyk
-                                </TextBlock>
-                                <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="8" HorizontalAlignment="Center">
-                                A great artist.
-                                </TextBlock>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Button Width="260" Height="260" Foreground="Transparent" Background="Transparent" BorderBrush="Transparent">
+                        <materialDesign:Card Width="225" Height="225" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                            <StackPanel>
+                                <Image Stretch="UniformToFill" Source="https://t.scdn.co/media/original/hip-274_0a661854d61e29eace5fe63f73495e68_274x274.jpg" />
+                                <TextBlock Margin="0 -75 0 0" Foreground="White" FontSize="18" TextAlignment="Center">Hip-Hop</TextBlock>
                             </StackPanel>
-                        </Grid>
-                    </materialDesign:Card>
+                        </materialDesign:Card>
+                    </Button>
                 </Grid>
 
-                <Grid Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
-                    <materialDesign:Card Grid.Row="1" Width="100" Height="100">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="60" />
-                                <RowDefinition Height="*" />
-                            </Grid.RowDefinitions>
-                            <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <materialDesign:PackIcon Kind="PlayArrow" />
-                            </Button>
-                            <StackPanel Grid.Row="1">
-                                <TextBlock FontWeight="Bold" FontSize="10" HorizontalAlignment="Center">
-                                Krzysztof Krawczyk
-                                </TextBlock>
-                                <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="8" HorizontalAlignment="Center">
-                                A great artist.
-                                </TextBlock>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Button Width="260" Height="260" Foreground="Transparent" Background="Transparent" BorderBrush="Transparent">
+                        <materialDesign:Card Width="225" Height="225" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                            <StackPanel>
+                                <Image Stretch="UniformToFill" Source="https://t.scdn.co/media/original/hip-274_0a661854d61e29eace5fe63f73495e68_274x274.jpg" />
+                                <TextBlock Margin="0 -75 0 0" Foreground="White" FontSize="18" TextAlignment="Center">Hip-Hop</TextBlock>
                             </StackPanel>
-                        </Grid>
-                    </materialDesign:Card>
+                        </materialDesign:Card>
+                    </Button>
                 </Grid>
 
-                <Grid Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
-                    <materialDesign:Card Grid.Row="1" Width="100" Height="100">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="60" />
-                                <RowDefinition Height="*" />
-                            </Grid.RowDefinitions>
-                            <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <materialDesign:PackIcon Kind="PlayArrow" />
-                            </Button>
-                            <StackPanel Grid.Row="1">
-                                <TextBlock FontWeight="Bold" FontSize="10" HorizontalAlignment="Center">
-                                Krzysztof Krawczyk
-                                </TextBlock>
-                                <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="8" HorizontalAlignment="Center">
-                                A great artist.
-                                </TextBlock>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Button Width="260" Height="260" Foreground="Transparent" Background="Transparent" BorderBrush="Transparent">
+                        <materialDesign:Card Width="225" Height="225" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                            <StackPanel>
+                                <Image Stretch="UniformToFill" Source="https://t.scdn.co/media/original/hip-274_0a661854d61e29eace5fe63f73495e68_274x274.jpg" />
+                                <TextBlock Margin="0 -75 0 0" Foreground="White" FontSize="18" TextAlignment="Center">Hip-Hop</TextBlock>
                             </StackPanel>
-                        </Grid>
-                    </materialDesign:Card>
+                        </materialDesign:Card>
+                    </Button>
                 </Grid>
 
-                <Grid Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
-                    <materialDesign:Card Grid.Row="1" Width="100" Height="100">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="60" />
-                                <RowDefinition Height="*" />
-                            </Grid.RowDefinitions>
-                            <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <materialDesign:PackIcon Kind="PlayArrow" />
-                            </Button>
-                            <StackPanel Grid.Row="1">
-                                <TextBlock FontWeight="Bold" FontSize="10" HorizontalAlignment="Center">
-                                Krzysztof Krawczyk
-                                </TextBlock>
-                                <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="8" HorizontalAlignment="Center">
-                                A great artist.
-                                </TextBlock>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Button Width="260" Height="260" Foreground="Transparent" Background="Transparent" BorderBrush="Transparent">
+                        <materialDesign:Card Width="225" Height="225" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                            <StackPanel>
+                                <Image Stretch="UniformToFill" Source="https://t.scdn.co/media/original/hip-274_0a661854d61e29eace5fe63f73495e68_274x274.jpg" />
+                                <TextBlock Margin="0 -75 0 0" Foreground="White" FontSize="18" TextAlignment="Center">Hip-Hop</TextBlock>
                             </StackPanel>
-                        </Grid>
-                    </materialDesign:Card>
+                        </materialDesign:Card>
+                    </Button>
                 </Grid>
 
-                <Grid Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
-                    <materialDesign:Card Grid.Row="1" Width="100" Height="100">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="60" />
-                                <RowDefinition Height="*" />
-                            </Grid.RowDefinitions>
-                            <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <materialDesign:PackIcon Kind="PlayArrow" />
-                            </Button>
-                            <StackPanel Grid.Row="1">
-                                <TextBlock FontWeight="Bold" FontSize="10" HorizontalAlignment="Center">
-                                Krzysztof Krawczyk
-                                </TextBlock>
-                                <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="8" HorizontalAlignment="Center">
-                                A great artist.
-                                </TextBlock>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Button Width="260" Height="260" Foreground="Transparent" Background="Transparent" BorderBrush="Transparent">
+                        <materialDesign:Card Width="225" Height="225" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                            <StackPanel>
+                                <Image Stretch="UniformToFill" Source="https://t.scdn.co/media/original/hip-274_0a661854d61e29eace5fe63f73495e68_274x274.jpg" />
+                                <TextBlock Margin="0 -75 0 0" Foreground="White" FontSize="18" TextAlignment="Center">Hip-Hop</TextBlock>
                             </StackPanel>
-                        </Grid>
-                    </materialDesign:Card>
+                        </materialDesign:Card>
+                    </Button>
                 </Grid>
 
-                <Grid Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
-                    <materialDesign:Card Grid.Row="1" Width="100" Height="100">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="60" />
-                                <RowDefinition Height="*" />
-                            </Grid.RowDefinitions>
-                            <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <materialDesign:PackIcon Kind="PlayArrow" />
-                            </Button>
-                            <StackPanel Grid.Row="1">
-                                <TextBlock FontWeight="Bold" FontSize="10" HorizontalAlignment="Center">
-                                Krzysztof Krawczyk
-                                </TextBlock>
-                                <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="8" HorizontalAlignment="Center">
-                                A great artist.
-                                </TextBlock>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Button Width="260" Height="260" Foreground="Transparent" Background="Transparent" BorderBrush="Transparent">
+                        <materialDesign:Card Width="225" Height="225" materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                            <StackPanel>
+                                <Image Stretch="UniformToFill" Source="https://t.scdn.co/media/original/hip-274_0a661854d61e29eace5fe63f73495e68_274x274.jpg" />
+                                <TextBlock Margin="0 -75 0 0" Foreground="White" FontSize="18" TextAlignment="Center">Hip-Hop</TextBlock>
                             </StackPanel>
-                        </Grid>
-                    </materialDesign:Card>
-                </Grid>
-
-                <Grid Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
-                    <materialDesign:Card Grid.Row="1" Width="100" Height="100">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="60" />
-                                <RowDefinition Height="*" />
-                            </Grid.RowDefinitions>
-                            <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <materialDesign:PackIcon Kind="PlayArrow" />
-                            </Button>
-                            <StackPanel Grid.Row="1">
-                                <TextBlock FontWeight="Bold" FontSize="10" HorizontalAlignment="Center">
-                                Krzysztof Krawczyk
-                                </TextBlock>
-                                <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="8" HorizontalAlignment="Center">
-                                A great artist.
-                                </TextBlock>
-                            </StackPanel>
-                        </Grid>
-                    </materialDesign:Card>
+                        </materialDesign:Card>
+                    </Button>
                 </Grid>
             </WrapPanel>
         </ScrollViewer>

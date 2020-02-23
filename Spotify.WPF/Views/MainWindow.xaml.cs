@@ -1,14 +1,32 @@
 ﻿namespace spotify
 {
+    using Microsoft.Win32;
+    using Spotify.ClassLibrary;
+    using Spotify.ClassLibrary.FeaturedPlaylists;
+    using Spotify.ClassLibrary.Shared;
+    using Spotify.WPF.Helpers;
     using Spotify.WPF.Views.Pages;
+    using System;
+    using System.Media;
     using System.Windows;
     using System.Windows.Controls;
+    using System.Windows.Media;
+    using System.Windows.Media.Imaging;
+    using System.Windows.Navigation;
 
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region Private Fields
+
+        private MediaPlayerConsumer _mediaPlayer;
+        private SpotifyAPI _spotify;
+        private bool isVolumeInit = true;
+
+        #endregion Private Fields
+
         #region Public Constructors
 
         /// <summary>
@@ -16,49 +34,39 @@
         /// </summary>
         public MainWindow()
         {
+            _mediaPlayer = new MediaPlayerConsumer();
+
             InitializeComponent();
+            _spotify = new SpotifyAPI();
+
+            SetUserInfo();
 
             CurrentPage.Content = new HomePage();
         }
 
         #endregion Public Constructors
 
+        #region Public Methods
+
+        public void Navigate(Page page)
+        {
+            CurrentPage.Navigate(page);
+        }
+
+        #endregion Public Methods
+
         #region Private Methods
 
         /// <summary>
-        /// The Button_Click
+        /// The Slider_ValueChanged
         /// </summary>
         /// <param name="sender">The sender <see cref="object" /></param>
-        /// <param name="e">The e <see cref="RoutedEventArgs" /></param>
-        private void Button_Click(object sender, RoutedEventArgs e)
+        /// <param name="e">The e <see cref="RoutedPropertyChangedEventArgs{double}" /></param>
+        private void HandleVolumeChange(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-        }
-
-        /// <summary>
-        /// The Button_Click_1
-        /// </summary>
-        /// <param name="sender">The sender <see cref="object" /></param>
-        /// <param name="e">The e <see cref="RoutedEventArgs" /></param>
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-        }
-
-        /// <summary>
-        /// The Button_Click_2
-        /// </summary>
-        /// <param name="sender">The sender <see cref="object" /></param>
-        /// <param name="e">The e <see cref="RoutedEventArgs" /></param>
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-        }
-
-        /// <summary>
-        /// The CheckBox_Checked
-        /// </summary>
-        /// <param name="sender">The sender <see cref="object" /></param>
-        /// <param name="e">The e <see cref="RoutedEventArgs" /></param>
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
+            var slider = sender as Slider;
+            double value = slider.Value / 100;
+            _mediaPlayer.ChangeVolume(value);
         }
 
         /// <summary>
@@ -86,9 +94,10 @@
         /// </summary>
         /// <param name="sender">The sender <see cref="object" /></param>
         /// <param name="e">The e <see cref="RoutedEventArgs" /></param>
-        private void NavigateToPlaylistsPage(object sender, RoutedEventArgs e)
+        private async void NavigateToPlaylistsPage(object sender, RoutedEventArgs e)
         {
-            CurrentPage.Content = new PlaylistsPage();
+            FeaturedPlaylistsResponse featuredPlaylists = await _spotify.GetFeaturedPLaylists();
+            CurrentPage.Content = new PlaylistsPage(featuredPlaylists);
         }
 
         /// <summary>
@@ -137,24 +146,15 @@
             CurrentPage.NavigationService.Refresh();
         }
 
-        /// <summary>
-        /// The ScrollViewer_Scroll
-        /// </summary>
-        /// <param name="sender">The sender <see cref="object" /></param>
-        /// <param name="e">
-        /// The e <see cref="System.Windows.Controls.Primitives.ScrollEventArgs" />
-        /// </param>
-        private void ScrollViewer_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
+        private async void SetUserInfo()
         {
-        }
+            User userInfo = await _spotify.GetSignedUserAsync();
+            UserDisplayName.Text = userInfo.DisplayName;
 
-        /// <summary>
-        /// The Slider_ValueChanged
-        /// </summary>
-        /// <param name="sender">The sender <see cref="object" /></param>
-        /// <param name="e">The e <see cref="RoutedPropertyChangedEventArgs{double}" /></param>
-        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
+            if (userInfo.Images.Count > 0)
+            {
+                UserImage.ImageSource = new BitmapImage(new Uri(userInfo.Images[0].Url, UriKind.RelativeOrAbsolute));
+            }
         }
 
         //private void NavigateToArtistPage(object sender, RoutedEventArgs e)
@@ -162,15 +162,12 @@
         //    SearchArtistsPage.Content = new ArtistPage();
         //}
 
-        /// <summary>
-        /// The TextBox_TextChanged
-        /// </summary>
-        /// <param name="sender">The sender <see cref="object" /></param>
-        /// <param name="e">The e <see cref="TextChangedEventArgs" /></param>
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-        }
-
         #endregion Private Methods
+
+        private void HandleClickPlay(object sender, RoutedEventArgs e)
+        {
+            _mediaPlayer.TogglePlay();
+            MaterialDesignThemes.Wpf.ButtonProgressAssist.SetIsIndeterminate(btnClick, _mediaPlayer.isPlaying);
+        }
     }
 }

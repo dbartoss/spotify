@@ -14,6 +14,10 @@ namespace Spotify.WPF.Views.Pages
             InitializeComponent();
         }
 
+        private void Hyperlink_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+        }
+
         #endregion Public Constructors
     }
 }
